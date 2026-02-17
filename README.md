@@ -61,12 +61,7 @@ Incluye:
 ---
 
 ### 📁 Scrum
-Carpeta reservada para la implementación futura de la metodología Scrum.
-Aquí se incluirán:
-- Product Backlog
-- Sprint Backlogs
-- Burndown Charts
-- Actas de reuniones Scrum
+Carpeta reservada para el futuro
 
 ---
 
