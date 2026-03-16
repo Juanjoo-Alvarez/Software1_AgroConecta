@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROJECT version="3.2" name="AgroConecta">
+  <OWNEDVIEWS>
+  </OWNEDVIEWS>
+  <OWNEDELEMENTS>
+    <MODEL id="1" superclass="UMLModel" name="AgroConecta MVC">
+
+      <!-- ═══════════════════════════════════════════ -->
+      <!-- PACKAGE: Vista (Interfaz)                   -->
+      <!-- ═══════════════════════════════════════════ -->
+      <OWNEDELEMENTS>
+        <MODEL id="PKG_VISTA" superclass="UMLPackage" name="Vista (Interfaz)">
+          <OWNEDELEMENTS>
+
+            <MODEL id="C_LoginActivity" superclass="UMLClass" name="LoginActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="A_LA_1" superclass="UMLAttribute" name="telefono" type="String" visibility="private"/>
+                <MODEL id="A_LA_2" superclass="UMLAttribute" name="contrasena" type="String" visibility="private"/>
+                <MODEL id="OP_LA_1" superclass="UMLOperation" name="onRegistrar()" visibility="public"/>
+                <MODEL id="OP_LA_2" superclass="UMLOperation" name="onIniciarSesion()" visibility="public"/>
+                <MODEL id="OP_LA_3" superclass="UMLOperation" name="validarCampos()" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_HomeActivity" superclass="UMLClass" name="HomeActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_HA_1" superclass="UMLOperation" name="cargarMenu()" visibility="public"/>
+                <MODEL id="OP_HA_2" superclass="UMLOperation" name="navegarA(destino: String)" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_ProductSearchActivity" superclass="UMLClass" name="ProductSearchActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="A_PSA_1" superclass="UMLAttribute" name="query" type="String" visibility="private"/>
+                <MODEL id="A_PSA_2" superclass="UMLAttribute" name="filtrosActivos" type="Map" visibility="private"/>
+                <MODEL id="OP_PSA_1" superclass="UMLOperation" name="onBuscar()" visibility="public"/>
+                <MODEL id="OP_PSA_2" superclass="UMLOperation" name="onFiltrar()" visibility="public"/>
+                <MODEL id="OP_PSA_3" superclass="UMLOperation" name="mostrarResultados(lista: List)" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_ProductDetailActivity" superclass="UMLClass" name="ProductDetailActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="A_PDA_1" superclass="UMLAttribute" name="idProducto" type="String" visibility="private"/>
+                <MODEL id="OP_PDA_1" superclass="UMLOperation" name="cargarDetalle()" visibility="public"/>
+                <MODEL id="OP_PDA_2" superclass="UMLOperation" name="onAgregarAlCarrito()" visibility="public"/>
+                <MODEL id="OP_PDA_3" superclass="UMLOperation" name="mostrarInformacionTecnica()" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_CartActivity" superclass="UMLClass" name="CartActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_CA_1" superclass="UMLOperation" name="mostrarCarrito()" visibility="public"/>
+                <MODEL id="OP_CA_2" superclass="UMLOperation" name="onEliminarItem(id: String)" visibility="public"/>
+                <MODEL id="OP_CA_3" superclass="UMLOperation" name="onProcederPago()" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_CheckoutActivity" superclass="UMLClass" name="CheckoutActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="A_CHA_1" superclass="UMLAttribute" name="metodoPago" type="String" visibility="private"/>
+                <MODEL id="OP_CHA_1" superclass="UMLOperation" name="seleccionarMetodoPago()" visibility="public"/>
+                <MODEL id="OP_CHA_2" superclass="UMLOperation" name="seleccionarDireccion()" visibility="public"/>
+                <MODEL id="OP_CHA_3" superclass="UMLOperation" name="confirmarPedido()" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_OrderTrackingActivity" superclass="UMLClass" name="OrderTrackingActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="A_OTA_1" superclass="UMLAttribute" name="idPedido" type="String" visibility="private"/>
+                <MODEL id="OP_OTA_1" superclass="UMLOperation" name="cargarEstado()" visibility="public"/>
+                <MODEL id="OP_OTA_2" superclass="UMLOperation" name="confirmarRecepcion()" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_OrderHistoryActivity" superclass="UMLClass" name="OrderHistoryActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_OHA_1" superclass="UMLOperation" name="cargarHistorial()" visibility="public"/>
+                <MODEL id="OP_OHA_2" superclass="UMLOperation" name="filtrarPorFecha(desde: Date, hasta: Date)" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_DistributorProfileActivity" superclass="UMLClass" name="DistributorProfileActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="A_DPA_1" superclass="UMLAttribute" name="idDistribuidor" type="String" visibility="private"/>
+                <MODEL id="OP_DPA_1" superclass="UMLOperation" name="cargarPerfil()" visibility="public"/>
+                <MODEL id="OP_DPA_2" superclass="UMLOperation" name="mostrarResenas()" visibility="public"/>
+                <MODEL id="OP_DPA_3" superclass="UMLOperation" name="mostrarSelloVerificacion()" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_ReportProductActivity" superclass="UMLClass" name="ReportProductActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_RPA_1" superclass="UMLOperation" name="enviarReporte()" visibility="public"/>
+                <MODEL id="OP_RPA_2" superclass="UMLOperation" name="adjuntarEvidencia()" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_DistributorDashboardActivity" superclass="UMLClass" name="DistributorDashboardActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_DDA_1" superclass="UMLOperation" name="cargarPedidosPendientes()" visibility="public"/>
+                <MODEL id="OP_DDA_2" superclass="UMLOperation" name="mostrarEstadisticas()" visibility="public"/>
+                <MODEL id="OP_DDA_3" superclass="UMLOperation" name="gestionarCatalogo()" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_AdminDashboardActivity" superclass="UMLClass" name="AdminDashboardActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_ADA_1" superclass="UMLOperation" name="listarDistribuidoresPendientes()" visibility="public"/>
+                <MODEL id="OP_ADA_2" superclass="UMLOperation" name="gestionarReportes()" visibility="public"/>
+                <MODEL id="OP_ADA_3" superclass="UMLOperation" name="verMetricas()" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_NotificationActivity" superclass="UMLClass" name="NotificationActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_NA_1" superclass="UMLOperation" name="cargarNotificaciones()" visibility="public"/>
+                <MODEL id="OP_NA_2" superclass="UMLOperation" name="marcarComoLeida(id: String)" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_AccessibilityHomeActivity" superclass="UMLClass" name="AccessibilityHomeActivity" stereotype="interfaz">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_AHA_1" superclass="UMLOperation" name="activarModoSimple()" visibility="public"/>
+                <MODEL id="OP_AHA_2" superclass="UMLOperation" name="cargarIconosGrandes()" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+          </OWNEDELEMENTS>
+        </MODEL>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- PACKAGE: Controladora                       -->
+        <!-- ═══════════════════════════════════════════ -->
+        <MODEL id="PKG_CTRL" superclass="UMLPackage" name="Controladora">
+          <OWNEDELEMENTS>
+
+            <MODEL id="C_AuthController" superclass="UMLClass" name="AuthController" stereotype="controladora">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_AC_1" superclass="UMLOperation" name="registrarAgricultor(user: User): Boolean" visibility="public"/>
+                <MODEL id="OP_AC_2" superclass="UMLOperation" name="registrarDistribuidor(dist: Distribuidor): Boolean" visibility="public"/>
+                <MODEL id="OP_AC_3" superclass="UMLOperation" name="iniciarSesion(tel: String, pass: String): User" visibility="public"/>
+                <MODEL id="OP_AC_4" superclass="UMLOperation" name="cerrarSesion()" visibility="public"/>
+                <MODEL id="OP_AC_5" superclass="UMLOperation" name="validarToken(token: String): Boolean" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_ProductController" superclass="UMLClass" name="ProductController" stereotype="controladora">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_PC_1" superclass="UMLOperation" name="buscarProductos(query: String): List" visibility="public"/>
+                <MODEL id="OP_PC_2" superclass="UMLOperation" name="filtrar(filtros: Map): List" visibility="public"/>
+                <MODEL id="OP_PC_3" superclass="UMLOperation" name="obtenerDetalle(id: String): Producto" visibility="public"/>
+                <MODEL id="OP_PC_4" superclass="UMLOperation" name="compararPrecios(idProducto: String): List" visibility="public"/>
+                <MODEL id="OP_PC_5" superclass="UMLOperation" name="obtenerCatalogo(): List" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_CartController" superclass="UMLClass" name="CartController" stereotype="controladora">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_CC_1" superclass="UMLOperation" name="agregarProducto(idProducto: String, cantidad: Int): Boolean" visibility="public"/>
+                <MODEL id="OP_CC_2" superclass="UMLOperation" name="eliminarItem(idItem: String): Boolean" visibility="public"/>
+                <MODEL id="OP_CC_3" superclass="UMLOperation" name="calcularTotal(): Double" visibility="public"/>
+                <MODEL id="OP_CC_4" superclass="UMLOperation" name="obtenerCarrito(idAgricultor: String): Carrito" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_OrderController" superclass="UMLClass" name="OrderController" stereotype="controladora">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_OC_1" superclass="UMLOperation" name="crearPedido(carrito: Carrito, pago: Pago): Pedido" visibility="public"/>
+                <MODEL id="OP_OC_2" superclass="UMLOperation" name="obtenerEstado(idPedido: String): String" visibility="public"/>
+                <MODEL id="OP_OC_3" superclass="UMLOperation" name="confirmarRecepcion(idPedido: String): Boolean" visibility="public"/>
+                <MODEL id="OP_OC_4" superclass="UMLOperation" name="obtenerHistorial(idAgricultor: String): List" visibility="public"/>
+                <MODEL id="OP_OC_5" superclass="UMLOperation" name="marcarUrgente(idPedido: String): Boolean" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_PaymentController" superclass="UMLClass" name="PaymentController" stereotype="controladora">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_PAC_1" superclass="UMLOperation" name="procesarContraEntrega(idPedido: String): Boolean" visibility="public"/>
+                <MODEL id="OP_PAC_2" superclass="UMLOperation" name="procesarBilleteraDigital(idPedido: String, metodo: String): Boolean" visibility="public"/>
+                <MODEL id="OP_PAC_3" superclass="UMLOperation" name="obtenerEstadoPago(idPedido: String): String" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_DistributorController" superclass="UMLClass" name="DistributorController" stereotype="controladora">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_DC_1" superclass="UMLOperation" name="publicarProducto(prod: Producto): Boolean" visibility="public"/>
+                <MODEL id="OP_DC_2" superclass="UMLOperation" name="actualizarStock(idProducto: String, stock: Int): Boolean" visibility="public"/>
+                <MODEL id="OP_DC_3" superclass="UMLOperation" name="obtenerPedidosPendientes(idDist: String): List" visibility="public"/>
+                <MODEL id="OP_DC_4" superclass="UMLOperation" name="obtenerEstadisticas(idDist: String): Map" visibility="public"/>
+                <MODEL id="OP_DC_5" superclass="UMLOperation" name="actualizarPrecio(idProducto: String, precio: Double): Boolean" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_ReviewController" superclass="UMLClass" name="ReviewController" stereotype="controladora">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_RC_1" superclass="UMLOperation" name="crearResena(r: Resenia): Boolean" visibility="public"/>
+                <MODEL id="OP_RC_2" superclass="UMLOperation" name="obtenerResenasByProducto(idProducto: String): List" visibility="public"/>
+                <MODEL id="OP_RC_3" superclass="UMLOperation" name="obtenerResenasByDistribuidor(idDist: String): List" visibility="public"/>
+                <MODEL id="OP_RC_4" superclass="UMLOperation" name="verificarCompra(idAgricultor: String, idProducto: String): Boolean" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_ReportController" superclass="UMLClass" name="ReportController" stereotype="controladora">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_RepC_1" superclass="UMLOperation" name="crearReporte(r: ReporteCalidad): Boolean" visibility="public"/>
+                <MODEL id="OP_RepC_2" superclass="UMLOperation" name="obtenerReportesPendientes(): List" visibility="public"/>
+                <MODEL id="OP_RepC_3" superclass="UMLOperation" name="resolverReporte(idReporte: String, resolucion: String): Boolean" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_NotificationController" superclass="UMLClass" name="NotificationController" stereotype="controladora">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_NC_1" superclass="UMLOperation" name="enviarNotificacion(n: Notificacion): Boolean" visibility="public"/>
+                <MODEL id="OP_NC_2" superclass="UMLOperation" name="obtenerNotificaciones(idUsuario: String): List" visibility="public"/>
+                <MODEL id="OP_NC_3" superclass="UMLOperation" name="marcarLeida(idNotif: String): Boolean" visibility="public"/>
+                <MODEL id="OP_NC_4" superclass="UMLOperation" name="alertarBajaPrecio(idProducto: String): void" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_AdminController" superclass="UMLClass" name="AdminController" stereotype="controladora">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_AdC_1" superclass="UMLOperation" name="verificarDistribuidor(idDist: String): Boolean" visibility="public"/>
+                <MODEL id="OP_AdC_2" superclass="UMLOperation" name="suspenderCuenta(idUser: String, razon: String): Boolean" visibility="public"/>
+                <MODEL id="OP_AdC_3" superclass="UMLOperation" name="obtenerMetricas(): Map" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_AddressController" superclass="UMLClass" name="AddressController" stereotype="controladora">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_AddrC_1" superclass="UMLOperation" name="guardarDireccion(d: Direccion): Boolean" visibility="public"/>
+                <MODEL id="OP_AddrC_2" superclass="UMLOperation" name="obtenerDirecciones(idAgricultor: String): List" visibility="public"/>
+                <MODEL id="OP_AddrC_3" superclass="UMLOperation" name="establecerPredeterminada(idDir: String): Boolean" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_RecurringOrderController" superclass="UMLClass" name="RecurringOrderController" stereotype="controladora">
+              <OWNEDELEMENTS>
+                <MODEL id="OP_ROC_1" superclass="UMLOperation" name="programarPedido(p: PedidoRecurrente): Boolean" visibility="public"/>
+                <MODEL id="OP_ROC_2" superclass="UMLOperation" name="cancelarPedidoRecurrente(id: String): Boolean" visibility="public"/>
+                <MODEL id="OP_ROC_3" superclass="UMLOperation" name="verificarProximos(): List" visibility="public"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+          </OWNEDELEMENTS>
+        </MODEL>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- PACKAGE: Modelo (Entidad)                   -->
+        <!-- ═══════════════════════════════════════════ -->
+        <MODEL id="PKG_MODEL" superclass="UMLPackage" name="Modelo (Entidad)">
+          <OWNEDELEMENTS>
+
+            <MODEL id="C_User" superclass="UMLClass" name="User" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_U_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_U_2" superclass="UMLAttribute" name="nombre" type="String" visibility="private"/>
+                <MODEL id="A_U_3" superclass="UMLAttribute" name="telefono" type="String" visibility="private"/>
+                <MODEL id="A_U_4" superclass="UMLAttribute" name="email" type="String" visibility="private"/>
+                <MODEL id="A_U_5" superclass="UMLAttribute" name="tipo" type="String" visibility="private"/>
+                <MODEL id="A_U_6" superclass="UMLAttribute" name="ubicacion" type="String" visibility="private"/>
+                <MODEL id="A_U_7" superclass="UMLAttribute" name="fechaRegistro" type="Date" visibility="private"/>
+                <MODEL id="A_U_8" superclass="UMLAttribute" name="activo" type="Boolean" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_Agricultor" superclass="UMLClass" name="Agricultor" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_Agr_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_Agr_2" superclass="UMLAttribute" name="idUser" type="String" visibility="private"/>
+                <MODEL id="A_Agr_3" superclass="UMLAttribute" name="cultivos" type="List" visibility="private"/>
+                <MODEL id="A_Agr_4" superclass="UMLAttribute" name="tamanoTerreno" type="Double" visibility="private"/>
+                <MODEL id="A_Agr_5" superclass="UMLAttribute" name="region" type="String" visibility="private"/>
+                <MODEL id="A_Agr_6" superclass="UMLAttribute" name="perfilCompleto" type="Boolean" visibility="private"/>
+                <MODEL id="A_Agr_7" superclass="UMLAttribute" name="nivelTecnologico" type="String" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_Distribuidor" superclass="UMLClass" name="Distribuidor" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_Dist_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_Dist_2" superclass="UMLAttribute" name="idUser" type="String" visibility="private"/>
+                <MODEL id="A_Dist_3" superclass="UMLAttribute" name="nombreEmpresa" type="String" visibility="private"/>
+                <MODEL id="A_Dist_4" superclass="UMLAttribute" name="descripcion" type="String" visibility="private"/>
+                <MODEL id="A_Dist_5" superclass="UMLAttribute" name="verificado" type="Boolean" visibility="private"/>
+                <MODEL id="A_Dist_6" superclass="UMLAttribute" name="selloCertificado" type="Boolean" visibility="private"/>
+                <MODEL id="A_Dist_7" superclass="UMLAttribute" name="calificacionPromedio" type="Double" visibility="private"/>
+                <MODEL id="A_Dist_8" superclass="UMLAttribute" name="totalVentas" type="Int" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_Administrador" superclass="UMLClass" name="Administrador" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_Adm_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_Adm_2" superclass="UMLAttribute" name="idUser" type="String" visibility="private"/>
+                <MODEL id="A_Adm_3" superclass="UMLAttribute" name="nivelAcceso" type="Int" visibility="private"/>
+                <MODEL id="A_Adm_4" superclass="UMLAttribute" name="permisos" type="List" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_Producto" superclass="UMLClass" name="Producto" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_Prod_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_Prod_2" superclass="UMLAttribute" name="nombre" type="String" visibility="private"/>
+                <MODEL id="A_Prod_3" superclass="UMLAttribute" name="descripcion" type="String" visibility="private"/>
+                <MODEL id="A_Prod_4" superclass="UMLAttribute" name="precio" type="Double" visibility="private"/>
+                <MODEL id="A_Prod_5" superclass="UMLAttribute" name="stock" type="Int" visibility="private"/>
+                <MODEL id="A_Prod_6" superclass="UMLAttribute" name="foto" type="String" visibility="private"/>
+                <MODEL id="A_Prod_7" superclass="UMLAttribute" name="unidadMedida" type="String" visibility="private"/>
+                <MODEL id="A_Prod_8" superclass="UMLAttribute" name="categoria" type="String" visibility="private"/>
+                <MODEL id="A_Prod_9" superclass="UMLAttribute" name="composicion" type="String" visibility="private"/>
+                <MODEL id="A_Prod_10" superclass="UMLAttribute" name="dosis" type="String" visibility="private"/>
+                <MODEL id="A_Prod_11" superclass="UMLAttribute" name="instrucciones" type="String" visibility="private"/>
+                <MODEL id="A_Prod_12" superclass="UMLAttribute" name="idDistribuidor" type="String" visibility="private"/>
+                <MODEL id="A_Prod_13" superclass="UMLAttribute" name="activo" type="Boolean" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_Categoria" superclass="UMLClass" name="Categoria" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_Cat_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_Cat_2" superclass="UMLAttribute" name="nombre" type="String" visibility="private"/>
+                <MODEL id="A_Cat_3" superclass="UMLAttribute" name="descripcion" type="String" visibility="private"/>
+                <MODEL id="A_Cat_4" superclass="UMLAttribute" name="icono" type="String" visibility="private"/>
+                <MODEL id="A_Cat_5" superclass="UMLAttribute" name="orden" type="Int" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_Carrito" superclass="UMLClass" name="Carrito" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_Car_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_Car_2" superclass="UMLAttribute" name="idAgricultor" type="String" visibility="private"/>
+                <MODEL id="A_Car_3" superclass="UMLAttribute" name="fechaCreacion" type="Date" visibility="private"/>
+                <MODEL id="A_Car_4" superclass="UMLAttribute" name="total" type="Double" visibility="private"/>
+                <MODEL id="A_Car_5" superclass="UMLAttribute" name="estado" type="String" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_ItemCarrito" superclass="UMLClass" name="ItemCarrito" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_IC_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_IC_2" superclass="UMLAttribute" name="idCarrito" type="String" visibility="private"/>
+                <MODEL id="A_IC_3" superclass="UMLAttribute" name="idProducto" type="String" visibility="private"/>
+                <MODEL id="A_IC_4" superclass="UMLAttribute" name="cantidad" type="Int" visibility="private"/>
+                <MODEL id="A_IC_5" superclass="UMLAttribute" name="precioUnitario" type="Double" visibility="private"/>
+                <MODEL id="A_IC_6" superclass="UMLAttribute" name="subtotal" type="Double" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_Pedido" superclass="UMLClass" name="Pedido" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_Ped_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_Ped_2" superclass="UMLAttribute" name="idAgricultor" type="String" visibility="private"/>
+                <MODEL id="A_Ped_3" superclass="UMLAttribute" name="idDistribuidor" type="String" visibility="private"/>
+                <MODEL id="A_Ped_4" superclass="UMLAttribute" name="estado" type="String" visibility="private"/>
+                <MODEL id="A_Ped_5" superclass="UMLAttribute" name="fechaPedido" type="Date" visibility="private"/>
+                <MODEL id="A_Ped_6" superclass="UMLAttribute" name="fechaEntrega" type="Date" visibility="private"/>
+                <MODEL id="A_Ped_7" superclass="UMLAttribute" name="totalPago" type="Double" visibility="private"/>
+                <MODEL id="A_Ped_8" superclass="UMLAttribute" name="metodoPago" type="String" visibility="private"/>
+                <MODEL id="A_Ped_9" superclass="UMLAttribute" name="direccionEntrega" type="String" visibility="private"/>
+                <MODEL id="A_Ped_10" superclass="UMLAttribute" name="urgente" type="Boolean" visibility="private"/>
+                <MODEL id="A_Ped_11" superclass="UMLAttribute" name="notaAdicional" type="String" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_DetallePedido" superclass="UMLClass" name="DetallePedido" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_DP_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_DP_2" superclass="UMLAttribute" name="idPedido" type="String" visibility="private"/>
+                <MODEL id="A_DP_3" superclass="UMLAttribute" name="idProducto" type="String" visibility="private"/>
+                <MODEL id="A_DP_4" superclass="UMLAttribute" name="cantidad" type="Int" visibility="private"/>
+                <MODEL id="A_DP_5" superclass="UMLAttribute" name="precioUnitario" type="Double" visibility="private"/>
+                <MODEL id="A_DP_6" superclass="UMLAttribute" name="subtotal" type="Double" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_Pago" superclass="UMLClass" name="Pago" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_Pag_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_Pag_2" superclass="UMLAttribute" name="idPedido" type="String" visibility="private"/>
+                <MODEL id="A_Pag_3" superclass="UMLAttribute" name="metodo" type="String" visibility="private"/>
+                <MODEL id="A_Pag_4" superclass="UMLAttribute" name="monto" type="Double" visibility="private"/>
+                <MODEL id="A_Pag_5" superclass="UMLAttribute" name="estado" type="String" visibility="private"/>
+                <MODEL id="A_Pag_6" superclass="UMLAttribute" name="referencia" type="String" visibility="private"/>
+                <MODEL id="A_Pag_7" superclass="UMLAttribute" name="fecha" type="Date" visibility="private"/>
+                <MODEL id="A_Pag_8" superclass="UMLAttribute" name="confirmado" type="Boolean" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_Direccion" superclass="UMLClass" name="Direccion" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_Dir_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_Dir_2" superclass="UMLAttribute" name="idAgricultor" type="String" visibility="private"/>
+                <MODEL id="A_Dir_3" superclass="UMLAttribute" name="departamento" type="String" visibility="private"/>
+                <MODEL id="A_Dir_4" superclass="UMLAttribute" name="municipio" type="String" visibility="private"/>
+                <MODEL id="A_Dir_5" superclass="UMLAttribute" name="aldea" type="String" visibility="private"/>
+                <MODEL id="A_Dir_6" superclass="UMLAttribute" name="referencia" type="String" visibility="private"/>
+                <MODEL id="A_Dir_7" superclass="UMLAttribute" name="latitud" type="Double" visibility="private"/>
+                <MODEL id="A_Dir_8" superclass="UMLAttribute" name="longitud" type="Double" visibility="private"/>
+                <MODEL id="A_Dir_9" superclass="UMLAttribute" name="predeterminada" type="Boolean" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_Resenia" superclass="UMLClass" name="Resenia" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_Res_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_Res_2" superclass="UMLAttribute" name="idAgricultor" type="String" visibility="private"/>
+                <MODEL id="A_Res_3" superclass="UMLAttribute" name="idProducto" type="String" visibility="private"/>
+                <MODEL id="A_Res_4" superclass="UMLAttribute" name="idDistribuidor" type="String" visibility="private"/>
+                <MODEL id="A_Res_5" superclass="UMLAttribute" name="calificacion" type="Int" visibility="private"/>
+                <MODEL id="A_Res_6" superclass="UMLAttribute" name="comentario" type="String" visibility="private"/>
+                <MODEL id="A_Res_7" superclass="UMLAttribute" name="fecha" type="Date" visibility="private"/>
+                <MODEL id="A_Res_8" superclass="UMLAttribute" name="verificada" type="Boolean" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_ReporteCalidad" superclass="UMLClass" name="ReporteCalidad" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_RC_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_RC_2" superclass="UMLAttribute" name="idAgricultor" type="String" visibility="private"/>
+                <MODEL id="A_RC_3" superclass="UMLAttribute" name="idProducto" type="String" visibility="private"/>
+                <MODEL id="A_RC_4" superclass="UMLAttribute" name="idDistribuidor" type="String" visibility="private"/>
+                <MODEL id="A_RC_5" superclass="UMLAttribute" name="descripcion" type="String" visibility="private"/>
+                <MODEL id="A_RC_6" superclass="UMLAttribute" name="estado" type="String" visibility="private"/>
+                <MODEL id="A_RC_7" superclass="UMLAttribute" name="fecha" type="Date" visibility="private"/>
+                <MODEL id="A_RC_8" superclass="UMLAttribute" name="resolucion" type="String" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_Notificacion" superclass="UMLClass" name="Notificacion" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_Not_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_Not_2" superclass="UMLAttribute" name="idUsuario" type="String" visibility="private"/>
+                <MODEL id="A_Not_3" superclass="UMLAttribute" name="tipo" type="String" visibility="private"/>
+                <MODEL id="A_Not_4" superclass="UMLAttribute" name="titulo" type="String" visibility="private"/>
+                <MODEL id="A_Not_5" superclass="UMLAttribute" name="mensaje" type="String" visibility="private"/>
+                <MODEL id="A_Not_6" superclass="UMLAttribute" name="leida" type="Boolean" visibility="private"/>
+                <MODEL id="A_Not_7" superclass="UMLAttribute" name="fecha" type="Date" visibility="private"/>
+                <MODEL id="A_Not_8" superclass="UMLAttribute" name="urlAccion" type="String" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+            <MODEL id="C_PedidoRecurrente" superclass="UMLClass" name="PedidoRecurrente" stereotype="entidad">
+              <OWNEDELEMENTS>
+                <MODEL id="A_PR_1" superclass="UMLAttribute" name="id" type="String" visibility="private"/>
+                <MODEL id="A_PR_2" superclass="UMLAttribute" name="idAgricultor" type="String" visibility="private"/>
+                <MODEL id="A_PR_3" superclass="UMLAttribute" name="idProducto" type="String" visibility="private"/>
+                <MODEL id="A_PR_4" superclass="UMLAttribute" name="cantidad" type="Int" visibility="private"/>
+                <MODEL id="A_PR_5" superclass="UMLAttribute" name="frecuenciaDias" type="Int" visibility="private"/>
+                <MODEL id="A_PR_6" superclass="UMLAttribute" name="proximaFecha" type="Date" visibility="private"/>
+                <MODEL id="A_PR_7" superclass="UMLAttribute" name="activo" type="Boolean" visibility="private"/>
+              </OWNEDELEMENTS>
+            </MODEL>
+
+          </OWNEDELEMENTS>
+        </MODEL>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- RELACIONES ENTRE CLASES                     -->
+        <!-- ═══════════════════════════════════════════ -->
+
+        <!-- Vista usa Controladora -->
+        <MODEL id="R_1" superclass="UMLDependency" name="" source="C_LoginActivity" target="C_AuthController"/>
+        <MODEL id="R_2" superclass="UMLDependency" name="" source="C_ProductSearchActivity" target="C_ProductController"/>
+        <MODEL id="R_3" superclass="UMLDependency" name="" source="C_ProductDetailActivity" target="C_ProductController"/>
+        <MODEL id="R_4" superclass="UMLDependency" name="" source="C_CartActivity" target="C_CartController"/>
+        <MODEL id="R_5" superclass="UMLDependency" name="" source="C_CheckoutActivity" target="C_OrderController"/>
+        <MODEL id="R_6" superclass="UMLDependency" name="" source="C_CheckoutActivity" target="C_PaymentController"/>
+        <MODEL id="R_7" superclass="UMLDependency" name="" source="C_CheckoutActivity" target="C_AddressController"/>
+        <MODEL id="R_8" superclass="UMLDependency" name="" source="C_OrderTrackingActivity" target="C_OrderController"/>
+        <MODEL id="R_9" superclass="UMLDependency" name="" source="C_OrderHistoryActivity" target="C_OrderController"/>
+        <MODEL id="R_10" superclass="UMLDependency" name="" source="C_DistributorProfileActivity" target="C_ReviewController"/>
+        <MODEL id="R_11" superclass="UMLDependency" name="" source="C_ReportProductActivity" target="C_ReportController"/>
+        <MODEL id="R_12" superclass="UMLDependency" name="" source="C_DistributorDashboardActivity" target="C_DistributorController"/>
+        <MODEL id="R_13" superclass="UMLDependency" name="" source="C_AdminDashboardActivity" target="C_AdminController"/>
+        <MODEL id="R_14" superclass="UMLDependency" name="" source="C_AdminDashboardActivity" target="C_ReportController"/>
+        <MODEL id="R_15" superclass="UMLDependency" name="" source="C_NotificationActivity" target="C_NotificationController"/>
+        <MODEL id="R_16" superclass="UMLDependency" name="" source="C_HomeActivity" target="C_NotificationController"/>
+
+        <!-- Controladora usa Entidad -->
+        <MODEL id="R_20" superclass="UMLDependency" name="" source="C_AuthController" target="C_User"/>
+        <MODEL id="R_21" superclass="UMLDependency" name="" source="C_AuthController" target="C_Agricultor"/>
+        <MODEL id="R_22" superclass="UMLDependency" name="" source="C_AuthController" target="C_Distribuidor"/>
+        <MODEL id="R_23" superclass="UMLDependency" name="" source="C_ProductController" target="C_Producto"/>
+        <MODEL id="R_24" superclass="UMLDependency" name="" source="C_ProductController" target="C_Categoria"/>
+        <MODEL id="R_25" superclass="UMLDependency" name="" source="C_CartController" target="C_Carrito"/>
+        <MODEL id="R_26" superclass="UMLDependency" name="" source="C_CartController" target="C_ItemCarrito"/>
+        <MODEL id="R_27" superclass="UMLDependency" name="" source="C_OrderController" target="C_Pedido"/>
+        <MODEL id="R_28" superclass="UMLDependency" name="" source="C_OrderController" target="C_DetallePedido"/>
+        <MODEL id="R_29" superclass="UMLDependency" name="" source="C_PaymentController" target="C_Pago"/>
+        <MODEL id="R_30" superclass="UMLDependency" name="" source="C_AddressController" target="C_Direccion"/>
+        <MODEL id="R_31" superclass="UMLDependency" name="" source="C_ReviewController" target="C_Resenia"/>
+        <MODEL id="R_32" superclass="UMLDependency" name="" source="C_ReportController" target="C_ReporteCalidad"/>
+        <MODEL id="R_33" superclass="UMLDependency" name="" source="C_NotificationController" target="C_Notificacion"/>
+        <MODEL id="R_34" superclass="UMLDependency" name="" source="C_RecurringOrderController" target="C_PedidoRecurrente"/>
+        <MODEL id="R_35" superclass="UMLDependency" name="" source="C_DistributorController" target="C_Producto"/>
+        <MODEL id="R_36" superclass="UMLDependency" name="" source="C_DistributorController" target="C_Pedido"/>
+        <MODEL id="R_37" superclass="UMLDependency" name="" source="C_AdminController" target="C_Distribuidor"/>
+        <MODEL id="R_38" superclass="UMLDependency" name="" source="C_AdminController" target="C_ReporteCalidad"/>
+
+        <!-- Composición Entidades -->
+        <MODEL id="R_40" superclass="UMLComposition" name="tiene" source="C_Carrito" target="C_ItemCarrito" multiplicity1="1" multiplicity2="*"/>
+        <MODEL id="R_41" superclass="UMLComposition" name="tiene" source="C_Pedido" target="C_DetallePedido" multiplicity1="1" multiplicity2="*"/>
+        <MODEL id="R_42" superclass="UMLComposition" name="tiene" source="C_Pedido" target="C_Pago" multiplicity1="1" multiplicity2="1"/>
+        <MODEL id="R_43" superclass="UMLAssociation" name="realiza" source="C_Agricultor" target="C_Pedido" multiplicity1="1" multiplicity2="*"/>
+        <MODEL id="R_44" superclass="UMLAssociation" name="publica" source="C_Distribuidor" target="C_Producto" multiplicity1="1" multiplicity2="*"/>
+        <MODEL id="R_45" superclass="UMLAssociation" name="pertenece" source="C_Producto" target="C_Categoria" multiplicity1="*" multiplicity2="1"/>
+        <MODEL id="R_46" superclass="UMLAssociation" name="escribe" source="C_Agricultor" target="C_Resenia" multiplicity1="1" multiplicity2="*"/>
+        <MODEL id="R_47" superclass="UMLAssociation" name="recibe" source="C_Distribuidor" target="C_Resenia" multiplicity1="1" multiplicity2="*"/>
+        <MODEL id="R_48" superclass="UMLAssociation" name="tiene" source="C_Agricultor" target="C_Direccion" multiplicity1="1" multiplicity2="*"/>
+        <MODEL id="R_49" superclass="UMLAssociation" name="hereda" source="C_Agricultor" target="C_User" multiplicity1="1" multiplicity2="1"/>
+        <MODEL id="R_50" superclass="UMLAssociation" name="hereda" source="C_Distribuidor" target="C_User" multiplicity1="1" multiplicity2="1"/>
+        <MODEL id="R_51" superclass="UMLAssociation" name="hereda" source="C_Administrador" target="C_User" multiplicity1="1" multiplicity2="1"/>
+
+      </OWNEDELEMENTS>
+    </MODEL>
+  </OWNEDELEMENTS>
+</PROJECT>
