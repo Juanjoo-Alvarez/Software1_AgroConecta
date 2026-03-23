@@ -1,0 +1,2556 @@
+{
+	"_type": "Project",
+	"_id": "PROJ1",
+	"name": "AgroConecta MVC",
+	"ownedElements": [
+		{
+			"_type": "UMLModel",
+			"_id": "MODEL1",
+			"_parent": {
+				"$ref": "PROJ1"
+			},
+			"name": "AgroConecta",
+			"ownedElements": [
+				{
+					"_type": "UMLPackage",
+					"_id": "PKG_VISTA",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"name": "Vista",
+					"ownedElements": [
+						{
+							"_type": "UMLClass",
+							"_id": "C_LoginActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "LoginActivity",
+							"stereotype": "interfaz",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_LA_1",
+									"name": "telefono",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_LA_2",
+									"name": "contrasena",
+									"visibility": "private",
+									"type": "String"
+								}
+							],
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_LA_1",
+									"name": "onRegistrar"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_LA_2",
+									"name": "onIniciarSesion"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_LA_3",
+									"name": "validarCampos",
+									"visibility": "private"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_HomeActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "HomeActivity",
+							"stereotype": "interfaz",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_HA_1",
+									"name": "cargarMenu"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_HA_2",
+									"name": "navegarA"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_ProductSearchActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "ProductSearchActivity",
+							"stereotype": "interfaz",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_PSA_1",
+									"name": "query",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_PSA_2",
+									"name": "filtrosActivos",
+									"visibility": "private",
+									"type": "Map"
+								}
+							],
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PSA_1",
+									"name": "onBuscar"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PSA_2",
+									"name": "onFiltrar"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PSA_3",
+									"name": "mostrarResultados"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_ProductDetailActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "ProductDetailActivity",
+							"stereotype": "interfaz",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_PDA_1",
+									"name": "idProducto",
+									"visibility": "private",
+									"type": "String"
+								}
+							],
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PDA_1",
+									"name": "cargarDetalle"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PDA_2",
+									"name": "onAgregarAlCarrito"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PDA_3",
+									"name": "mostrarInformacionTecnica"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_CartActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "CartActivity",
+							"stereotype": "interfaz",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_CA_1",
+									"name": "mostrarCarrito"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_CA_2",
+									"name": "onEliminarItem"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_CA_3",
+									"name": "onProcederPago"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_CheckoutActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "CheckoutActivity",
+							"stereotype": "interfaz",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_CHA_1",
+									"name": "metodoPago",
+									"visibility": "private",
+									"type": "String"
+								}
+							],
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_CHA_1",
+									"name": "seleccionarMetodoPago"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_CHA_2",
+									"name": "seleccionarDireccion"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_CHA_3",
+									"name": "confirmarPedido"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_OrderTrackingActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "OrderTrackingActivity",
+							"stereotype": "interfaz",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_OTA_1",
+									"name": "idPedido",
+									"visibility": "private",
+									"type": "String"
+								}
+							],
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_OTA_1",
+									"name": "cargarEstado"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_OTA_2",
+									"name": "confirmarRecepcion"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_OrderHistoryActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "OrderHistoryActivity",
+							"stereotype": "interfaz",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_OHA_1",
+									"name": "cargarHistorial"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_OHA_2",
+									"name": "filtrarPorFecha"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_DistributorProfileActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "DistributorProfileActivity",
+							"stereotype": "interfaz",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_DPA_1",
+									"name": "idDistribuidor",
+									"visibility": "private",
+									"type": "String"
+								}
+							],
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_DPA_1",
+									"name": "cargarPerfil"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_DPA_2",
+									"name": "mostrarResenas"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_DPA_3",
+									"name": "mostrarSelloVerificacion"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_ReportProductActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "ReportProductActivity",
+							"stereotype": "interfaz",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_RPA_1",
+									"name": "enviarReporte"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_RPA_2",
+									"name": "adjuntarEvidencia"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_DistributorDashboardActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "DistributorDashboardActivity",
+							"stereotype": "interfaz",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_DDA_1",
+									"name": "cargarPedidosPendientes"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_DDA_2",
+									"name": "mostrarEstadisticas"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_DDA_3",
+									"name": "gestionarCatalogo"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_AdminDashboardActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "AdminDashboardActivity",
+							"stereotype": "interfaz",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_ADA_1",
+									"name": "listarDistribuidoresPendientes"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_ADA_2",
+									"name": "gestionarReportes"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_ADA_3",
+									"name": "verMetricas"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_NotificationActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "NotificationActivity",
+							"stereotype": "interfaz",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_NA_1",
+									"name": "cargarNotificaciones"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_NA_2",
+									"name": "marcarComoLeida"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_AccessibilityHomeActivity",
+							"_parent": {
+								"$ref": "PKG_VISTA"
+							},
+							"name": "AccessibilityHomeActivity",
+							"stereotype": "interfaz",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_AHA_1",
+									"name": "activarModoSimple"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_AHA_2",
+									"name": "cargarIconosGrandes"
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLPackage",
+					"_id": "PKG_CTRL",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"name": "Controladora",
+					"ownedElements": [
+						{
+							"_type": "UMLClass",
+							"_id": "C_AuthController",
+							"_parent": {
+								"$ref": "PKG_CTRL"
+							},
+							"name": "AuthController",
+							"stereotype": "controladora",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_AC_1",
+									"name": "registrarAgricultor"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_AC_2",
+									"name": "registrarDistribuidor"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_AC_3",
+									"name": "iniciarSesion"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_AC_4",
+									"name": "cerrarSesion"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_AC_5",
+									"name": "validarToken",
+									"visibility": "private"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_ProductController",
+							"_parent": {
+								"$ref": "PKG_CTRL"
+							},
+							"name": "ProductController",
+							"stereotype": "controladora",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PC_1",
+									"name": "buscarProductos"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PC_2",
+									"name": "filtrar"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PC_3",
+									"name": "obtenerDetalle"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PC_4",
+									"name": "compararPrecios"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PC_5",
+									"name": "obtenerCatalogo"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_CartController",
+							"_parent": {
+								"$ref": "PKG_CTRL"
+							},
+							"name": "CartController",
+							"stereotype": "controladora",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_CC_1",
+									"name": "agregarProducto"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_CC_2",
+									"name": "eliminarItem"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_CC_3",
+									"name": "calcularTotal"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_CC_4",
+									"name": "obtenerCarrito"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_OrderController",
+							"_parent": {
+								"$ref": "PKG_CTRL"
+							},
+							"name": "OrderController",
+							"stereotype": "controladora",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_OC_1",
+									"name": "crearPedido"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_OC_2",
+									"name": "obtenerEstado"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_OC_3",
+									"name": "confirmarRecepcion"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_OC_4",
+									"name": "obtenerHistorial"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_OC_5",
+									"name": "marcarUrgente"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_PaymentController",
+							"_parent": {
+								"$ref": "PKG_CTRL"
+							},
+							"name": "PaymentController",
+							"stereotype": "controladora",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PAC_1",
+									"name": "procesarContraEntrega"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PAC_2",
+									"name": "procesarBilleteraDigital"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_PAC_3",
+									"name": "obtenerEstadoPago"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_DistributorController",
+							"_parent": {
+								"$ref": "PKG_CTRL"
+							},
+							"name": "DistributorController",
+							"stereotype": "controladora",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_DC_1",
+									"name": "publicarProducto"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_DC_2",
+									"name": "actualizarStock"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_DC_3",
+									"name": "obtenerPedidosPendientes"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_DC_4",
+									"name": "obtenerEstadisticas"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_DC_5",
+									"name": "actualizarPrecio"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_ReviewController",
+							"_parent": {
+								"$ref": "PKG_CTRL"
+							},
+							"name": "ReviewController",
+							"stereotype": "controladora",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_RC_1",
+									"name": "crearResena"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_RC_2",
+									"name": "obtenerResenasByProducto"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_RC_3",
+									"name": "obtenerResenasByDistribuidor"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_RC_4",
+									"name": "verificarCompra",
+									"visibility": "private"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_ReportController",
+							"_parent": {
+								"$ref": "PKG_CTRL"
+							},
+							"name": "ReportController",
+							"stereotype": "controladora",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_RepC_1",
+									"name": "crearReporte"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_RepC_2",
+									"name": "obtenerReportesPendientes"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_RepC_3",
+									"name": "resolverReporte"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_NotificationController",
+							"_parent": {
+								"$ref": "PKG_CTRL"
+							},
+							"name": "NotificationController",
+							"stereotype": "controladora",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_NC_1",
+									"name": "enviarNotificacion"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_NC_2",
+									"name": "obtenerNotificaciones"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_NC_3",
+									"name": "marcarLeida"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_NC_4",
+									"name": "alertarBajaPrecio"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_AdminController",
+							"_parent": {
+								"$ref": "PKG_CTRL"
+							},
+							"name": "AdminController",
+							"stereotype": "controladora",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_AdC_1",
+									"name": "verificarDistribuidor"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_AdC_2",
+									"name": "suspenderCuenta"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_AdC_3",
+									"name": "obtenerMetricas"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_AddressController",
+							"_parent": {
+								"$ref": "PKG_CTRL"
+							},
+							"name": "AddressController",
+							"stereotype": "controladora",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_AddrC_1",
+									"name": "guardarDireccion"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_AddrC_2",
+									"name": "obtenerDirecciones"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_AddrC_3",
+									"name": "establecerPredeterminada"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_RecurringOrderController",
+							"_parent": {
+								"$ref": "PKG_CTRL"
+							},
+							"name": "RecurringOrderController",
+							"stereotype": "controladora",
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_ROC_1",
+									"name": "programarPedido"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_ROC_2",
+									"name": "cancelarPedidoRecurrente"
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "OP_ROC_3",
+									"name": "verificarProximos"
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLPackage",
+					"_id": "PKG_MODEL",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"name": "Modelo",
+					"ownedElements": [
+						{
+							"_type": "UMLClass",
+							"_id": "C_User",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "User",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_U_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_U_2",
+									"name": "nombre",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_U_3",
+									"name": "telefono",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_U_4",
+									"name": "email",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_U_5",
+									"name": "tipo",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_U_6",
+									"name": "ubicacion",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_U_7",
+									"name": "fechaRegistro",
+									"visibility": "private",
+									"type": "Date"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_U_8",
+									"name": "activo",
+									"visibility": "private",
+									"type": "Boolean"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_Agricultor",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "Agricultor",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Agr_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Agr_2",
+									"name": "idUser",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Agr_3",
+									"name": "cultivos",
+									"visibility": "private",
+									"type": "List"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Agr_4",
+									"name": "tamanoTerreno",
+									"visibility": "private",
+									"type": "Double"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Agr_5",
+									"name": "region",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Agr_6",
+									"name": "perfilCompleto",
+									"visibility": "private",
+									"type": "Boolean"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Agr_7",
+									"name": "nivelTecnologico",
+									"visibility": "private",
+									"type": "String"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_Distribuidor",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "Distribuidor",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dist_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dist_2",
+									"name": "idUser",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dist_3",
+									"name": "nombreEmpresa",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dist_4",
+									"name": "descripcion",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dist_5",
+									"name": "verificado",
+									"visibility": "private",
+									"type": "Boolean"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dist_6",
+									"name": "selloCertificado",
+									"visibility": "private",
+									"type": "Boolean"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dist_7",
+									"name": "calificacionPromedio",
+									"visibility": "private",
+									"type": "Double"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dist_8",
+									"name": "totalVentas",
+									"visibility": "private",
+									"type": "Int"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_Administrador",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "Administrador",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Adm_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Adm_2",
+									"name": "idUser",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Adm_3",
+									"name": "nivelAcceso",
+									"visibility": "private",
+									"type": "Int"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Adm_4",
+									"name": "permisos",
+									"visibility": "private",
+									"type": "List"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_Producto",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "Producto",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Prod_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Prod_2",
+									"name": "nombre",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Prod_3",
+									"name": "descripcion",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Prod_4",
+									"name": "precio",
+									"visibility": "private",
+									"type": "Double"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Prod_5",
+									"name": "stock",
+									"visibility": "private",
+									"type": "Int"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Prod_6",
+									"name": "foto",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Prod_7",
+									"name": "unidadMedida",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Prod_8",
+									"name": "categoria",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Prod_9",
+									"name": "composicion",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Prod_10",
+									"name": "dosis",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Prod_11",
+									"name": "instrucciones",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Prod_12",
+									"name": "idDistribuidor",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Prod_13",
+									"name": "activo",
+									"visibility": "private",
+									"type": "Boolean"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_Categoria",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "Categoria",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Cat_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Cat_2",
+									"name": "nombre",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Cat_3",
+									"name": "descripcion",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Cat_4",
+									"name": "icono",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Cat_5",
+									"name": "orden",
+									"visibility": "private",
+									"type": "Int"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_Carrito",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "Carrito",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Car_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Car_2",
+									"name": "idAgricultor",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Car_3",
+									"name": "fechaCreacion",
+									"visibility": "private",
+									"type": "Date"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Car_4",
+									"name": "total",
+									"visibility": "private",
+									"type": "Double"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Car_5",
+									"name": "estado",
+									"visibility": "private",
+									"type": "String"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_ItemCarrito",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "ItemCarrito",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_IC_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_IC_2",
+									"name": "idCarrito",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_IC_3",
+									"name": "idProducto",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_IC_4",
+									"name": "cantidad",
+									"visibility": "private",
+									"type": "Int"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_IC_5",
+									"name": "precioUnitario",
+									"visibility": "private",
+									"type": "Double"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_IC_6",
+									"name": "subtotal",
+									"visibility": "private",
+									"type": "Double"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_Pedido",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "Pedido",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Ped_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Ped_2",
+									"name": "idAgricultor",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Ped_3",
+									"name": "idDistribuidor",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Ped_4",
+									"name": "estado",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Ped_5",
+									"name": "fechaPedido",
+									"visibility": "private",
+									"type": "Date"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Ped_6",
+									"name": "fechaEntrega",
+									"visibility": "private",
+									"type": "Date"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Ped_7",
+									"name": "totalPago",
+									"visibility": "private",
+									"type": "Double"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Ped_8",
+									"name": "metodoPago",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Ped_9",
+									"name": "direccionEntrega",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Ped_10",
+									"name": "urgente",
+									"visibility": "private",
+									"type": "Boolean"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Ped_11",
+									"name": "notaAdicional",
+									"visibility": "private",
+									"type": "String"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_DetallePedido",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "DetallePedido",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_DP_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_DP_2",
+									"name": "idPedido",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_DP_3",
+									"name": "idProducto",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_DP_4",
+									"name": "cantidad",
+									"visibility": "private",
+									"type": "Int"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_DP_5",
+									"name": "precioUnitario",
+									"visibility": "private",
+									"type": "Double"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_DP_6",
+									"name": "subtotal",
+									"visibility": "private",
+									"type": "Double"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_Pago",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "Pago",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Pag_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Pag_2",
+									"name": "idPedido",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Pag_3",
+									"name": "metodo",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Pag_4",
+									"name": "monto",
+									"visibility": "private",
+									"type": "Double"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Pag_5",
+									"name": "estado",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Pag_6",
+									"name": "referencia",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Pag_7",
+									"name": "fecha",
+									"visibility": "private",
+									"type": "Date"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Pag_8",
+									"name": "confirmado",
+									"visibility": "private",
+									"type": "Boolean"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_Direccion",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "Direccion",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dir_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dir_2",
+									"name": "idAgricultor",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dir_3",
+									"name": "departamento",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dir_4",
+									"name": "municipio",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dir_5",
+									"name": "aldea",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dir_6",
+									"name": "referencia",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dir_7",
+									"name": "latitud",
+									"visibility": "private",
+									"type": "Double"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dir_8",
+									"name": "longitud",
+									"visibility": "private",
+									"type": "Double"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Dir_9",
+									"name": "predeterminada",
+									"visibility": "private",
+									"type": "Boolean"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_Resenia",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "Resenia",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Res_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Res_2",
+									"name": "idAgricultor",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Res_3",
+									"name": "idProducto",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Res_4",
+									"name": "idDistribuidor",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Res_5",
+									"name": "calificacion",
+									"visibility": "private",
+									"type": "Int"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Res_6",
+									"name": "comentario",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Res_7",
+									"name": "fecha",
+									"visibility": "private",
+									"type": "Date"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Res_8",
+									"name": "verificada",
+									"visibility": "private",
+									"type": "Boolean"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_ReporteCalidad",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "ReporteCalidad",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_RC_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_RC_2",
+									"name": "idAgricultor",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_RC_3",
+									"name": "idProducto",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_RC_4",
+									"name": "idDistribuidor",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_RC_5",
+									"name": "descripcion",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_RC_6",
+									"name": "estado",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_RC_7",
+									"name": "fecha",
+									"visibility": "private",
+									"type": "Date"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_RC_8",
+									"name": "resolucion",
+									"visibility": "private",
+									"type": "String"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_Notificacion",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "Notificacion",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Not_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Not_2",
+									"name": "idUsuario",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Not_3",
+									"name": "tipo",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Not_4",
+									"name": "titulo",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Not_5",
+									"name": "mensaje",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Not_6",
+									"name": "leida",
+									"visibility": "private",
+									"type": "Boolean"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Not_7",
+									"name": "fecha",
+									"visibility": "private",
+									"type": "Date"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_Not_8",
+									"name": "urlAccion",
+									"visibility": "private",
+									"type": "String"
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "C_PedidoRecurrente",
+							"_parent": {
+								"$ref": "PKG_MODEL"
+							},
+							"name": "PedidoRecurrente",
+							"stereotype": "entidad",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_PR_1",
+									"name": "id",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_PR_2",
+									"name": "idAgricultor",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_PR_3",
+									"name": "idProducto",
+									"visibility": "private",
+									"type": "String"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_PR_4",
+									"name": "cantidad",
+									"visibility": "private",
+									"type": "Int"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_PR_5",
+									"name": "frecuenciaDias",
+									"visibility": "private",
+									"type": "Int"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_PR_6",
+									"name": "proximaFecha",
+									"visibility": "private",
+									"type": "Date"
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "A_PR_7",
+									"name": "activo",
+									"visibility": "private",
+									"type": "Boolean"
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLAssociation",
+					"_id": "R_40",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"name": "tiene",
+					"end1": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_40_E1",
+						"reference": {
+							"$ref": "C_Carrito"
+						},
+						"aggregation": "composite",
+						"multiplicity": "1"
+					},
+					"end2": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_40_E2",
+						"reference": {
+							"$ref": "C_ItemCarrito"
+						},
+						"multiplicity": "*"
+					}
+				},
+				{
+					"_type": "UMLAssociation",
+					"_id": "R_41",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"name": "tiene",
+					"end1": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_41_E1",
+						"reference": {
+							"$ref": "C_Pedido"
+						},
+						"aggregation": "composite",
+						"multiplicity": "1"
+					},
+					"end2": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_41_E2",
+						"reference": {
+							"$ref": "C_DetallePedido"
+						},
+						"multiplicity": "*"
+					}
+				},
+				{
+					"_type": "UMLAssociation",
+					"_id": "R_42",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"name": "genera",
+					"end1": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_42_E1",
+						"reference": {
+							"$ref": "C_Pedido"
+						},
+						"aggregation": "composite",
+						"multiplicity": "1"
+					},
+					"end2": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_42_E2",
+						"reference": {
+							"$ref": "C_Pago"
+						},
+						"multiplicity": "1"
+					}
+				},
+				{
+					"_type": "UMLAssociation",
+					"_id": "R_43",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"name": "realiza",
+					"end1": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_43_E1",
+						"reference": {
+							"$ref": "C_Agricultor"
+						},
+						"multiplicity": "1"
+					},
+					"end2": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_43_E2",
+						"reference": {
+							"$ref": "C_Pedido"
+						},
+						"multiplicity": "*"
+					}
+				},
+				{
+					"_type": "UMLAssociation",
+					"_id": "R_44",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"name": "publica",
+					"end1": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_44_E1",
+						"reference": {
+							"$ref": "C_Distribuidor"
+						},
+						"multiplicity": "1"
+					},
+					"end2": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_44_E2",
+						"reference": {
+							"$ref": "C_Producto"
+						},
+						"multiplicity": "*"
+					}
+				},
+				{
+					"_type": "UMLAssociation",
+					"_id": "R_45",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"name": "pertenece",
+					"end1": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_45_E1",
+						"reference": {
+							"$ref": "C_Producto"
+						},
+						"multiplicity": "*"
+					},
+					"end2": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_45_E2",
+						"reference": {
+							"$ref": "C_Categoria"
+						},
+						"multiplicity": "1"
+					}
+				},
+				{
+					"_type": "UMLAssociation",
+					"_id": "R_46",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"name": "escribe",
+					"end1": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_46_E1",
+						"reference": {
+							"$ref": "C_Agricultor"
+						},
+						"multiplicity": "1"
+					},
+					"end2": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_46_E2",
+						"reference": {
+							"$ref": "C_Resenia"
+						},
+						"multiplicity": "*"
+					}
+				},
+				{
+					"_type": "UMLAssociation",
+					"_id": "R_47",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"name": "recibe",
+					"end1": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_47_E1",
+						"reference": {
+							"$ref": "C_Distribuidor"
+						},
+						"multiplicity": "1"
+					},
+					"end2": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_47_E2",
+						"reference": {
+							"$ref": "C_Resenia"
+						},
+						"multiplicity": "*"
+					}
+				},
+				{
+					"_type": "UMLAssociation",
+					"_id": "R_48",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"name": "tiene",
+					"end1": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_48_E1",
+						"reference": {
+							"$ref": "C_Agricultor"
+						},
+						"multiplicity": "1"
+					},
+					"end2": {
+						"_type": "UMLAssociationEnd",
+						"_id": "R_48_E2",
+						"reference": {
+							"$ref": "C_Direccion"
+						},
+						"multiplicity": "*"
+					}
+				},
+				{
+					"_type": "UMLGeneralization",
+					"_id": "R_49",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_Agricultor"
+					},
+					"target": {
+						"$ref": "C_User"
+					}
+				},
+				{
+					"_type": "UMLGeneralization",
+					"_id": "R_50",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_Distribuidor"
+					},
+					"target": {
+						"$ref": "C_User"
+					}
+				},
+				{
+					"_type": "UMLGeneralization",
+					"_id": "R_51",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_Administrador"
+					},
+					"target": {
+						"$ref": "C_User"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_1",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_LoginActivity"
+					},
+					"target": {
+						"$ref": "C_AuthController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_2",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_ProductSearchActivity"
+					},
+					"target": {
+						"$ref": "C_ProductController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_3",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_ProductDetailActivity"
+					},
+					"target": {
+						"$ref": "C_ProductController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_4",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_CartActivity"
+					},
+					"target": {
+						"$ref": "C_CartController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_5",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_CheckoutActivity"
+					},
+					"target": {
+						"$ref": "C_OrderController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_6",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_CheckoutActivity"
+					},
+					"target": {
+						"$ref": "C_PaymentController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_7",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_CheckoutActivity"
+					},
+					"target": {
+						"$ref": "C_AddressController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_8",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_OrderTrackingActivity"
+					},
+					"target": {
+						"$ref": "C_OrderController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_9",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_OrderHistoryActivity"
+					},
+					"target": {
+						"$ref": "C_OrderController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_10",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_DistributorProfileActivity"
+					},
+					"target": {
+						"$ref": "C_ReviewController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_11",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_ReportProductActivity"
+					},
+					"target": {
+						"$ref": "C_ReportController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_12",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_DistributorDashboardActivity"
+					},
+					"target": {
+						"$ref": "C_DistributorController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_13",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_AdminDashboardActivity"
+					},
+					"target": {
+						"$ref": "C_AdminController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_14",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_AdminDashboardActivity"
+					},
+					"target": {
+						"$ref": "C_ReportController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_15",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_NotificationActivity"
+					},
+					"target": {
+						"$ref": "C_NotificationController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_16",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_HomeActivity"
+					},
+					"target": {
+						"$ref": "C_NotificationController"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_20",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_AuthController"
+					},
+					"target": {
+						"$ref": "C_User"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_21",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_AuthController"
+					},
+					"target": {
+						"$ref": "C_Agricultor"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_22",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_AuthController"
+					},
+					"target": {
+						"$ref": "C_Distribuidor"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_23",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_ProductController"
+					},
+					"target": {
+						"$ref": "C_Producto"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_24",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_ProductController"
+					},
+					"target": {
+						"$ref": "C_Categoria"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_25",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_CartController"
+					},
+					"target": {
+						"$ref": "C_Carrito"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_26",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_CartController"
+					},
+					"target": {
+						"$ref": "C_ItemCarrito"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_27",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_OrderController"
+					},
+					"target": {
+						"$ref": "C_Pedido"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_28",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_OrderController"
+					},
+					"target": {
+						"$ref": "C_DetallePedido"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_29",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_PaymentController"
+					},
+					"target": {
+						"$ref": "C_Pago"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_30",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_AddressController"
+					},
+					"target": {
+						"$ref": "C_Direccion"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_31",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_ReviewController"
+					},
+					"target": {
+						"$ref": "C_Resenia"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_32",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_ReportController"
+					},
+					"target": {
+						"$ref": "C_ReporteCalidad"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_33",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_NotificationController"
+					},
+					"target": {
+						"$ref": "C_Notificacion"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_34",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_RecurringOrderController"
+					},
+					"target": {
+						"$ref": "C_PedidoRecurrente"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_35",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_DistributorController"
+					},
+					"target": {
+						"$ref": "C_Producto"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_36",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_DistributorController"
+					},
+					"target": {
+						"$ref": "C_Pedido"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_37",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_AdminController"
+					},
+					"target": {
+						"$ref": "C_Distribuidor"
+					}
+				},
+				{
+					"_type": "UMLDependency",
+					"_id": "R_38",
+					"_parent": {
+						"$ref": "MODEL1"
+					},
+					"source": {
+						"$ref": "C_AdminController"
+					},
+					"target": {
+						"$ref": "C_ReporteCalidad"
+					}
+				}
+			]
+		}
+	],
+	"documentVersion": 1
+}
