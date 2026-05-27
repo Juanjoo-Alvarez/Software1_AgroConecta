@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1050" viewBox="0 0 1500 1050">
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 36px Arial,sans-serif;fill:#102a43}.sub{font:400 18px Arial,sans-serif;fill:#52616b}.box{fill:#fff;stroke:#5c7c89;stroke-width:2}.head{fill:#2f5d62}.headText{font:700 17px Arial,sans-serif;fill:#fff}.attr{font:400 14px Arial,sans-serif;fill:#243b53}.rel{stroke:#486581;stroke-width:2;fill:none;marker-end:url(#arrow)}.note{font:700 14px Arial,sans-serif;fill:#334e68}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#486581"/></marker>
+  </defs>
+  <rect class="bg" width="1500" height="1050"/>
+  <text x="55" y="65" class="title">Diagrama de clases - AgroConecta</text>
+  <text x="55" y="98" class="sub">Modelo conceptual del dominio principal: usuarios, catálogo, inventario, pedidos, pagos, rastreo y reseñas.</text>
+
+  <g id="usuario" transform="translate(60,145)"><rect class="box" width="245" height="170" rx="8"/><rect class="head" width="245" height="42" rx="8"/><text x="75" y="27" class="headText">Usuario</text><text x="16" y="66" class="attr">+ id_usuario: int</text><text x="16" y="88" class="attr">+ nombre: string</text><text x="16" y="110" class="attr">+ telefono: string</text><text x="16" y="132" class="attr">+ email: string</text><text x="16" y="154" class="attr">+ tipo_usuario: string</text></g>
+  <g id="agricultor" transform="translate(380,145)"><rect class="box" width="255" height="170" rx="8"/><rect class="head" width="255" height="42" rx="8"/><text x="77" y="27" class="headText">Agricultor</text><text x="16" y="66" class="attr">+ id_agricultor: int</text><text x="16" y="88" class="attr">+ departamento: string</text><text x="16" y="110" class="attr">+ municipio: string</text><text x="16" y="132" class="attr">+ tipo_agricultor: string</text><text x="16" y="154" class="attr">+ tiene_membresia: bool</text></g>
+  <g id="distribuidor" transform="translate(700,145)"><rect class="box" width="275" height="170" rx="8"/><rect class="head" width="275" height="42" rx="8"/><text x="82" y="27" class="headText">Distribuidor</text><text x="16" y="66" class="attr">+ id_distribuidor: int</text><text x="16" y="88" class="attr">+ nombre_negocio: string</text><text x="16" y="110" class="attr">+ nit: string</text><text x="16" y="132" class="attr">+ estado_verificacion: string</text><text x="16" y="154" class="attr">+ calificacion_promedio: decimal</text></g>
+  <g id="categoria" transform="translate(1090,145)"><rect class="box" width="245" height="126" rx="8"/><rect class="head" width="245" height="42" rx="8"/><text x="78" y="27" class="headText">Categoria</text><text x="16" y="66" class="attr">+ id_categoria: int</text><text x="16" y="88" class="attr">+ nombre: string</text><text x="16" y="110" class="attr">+ descripcion: text</text></g>
+
+  <g id="producto" transform="translate(1090,350)"><rect class="box" width="245" height="170" rx="8"/><rect class="head" width="245" height="42" rx="8"/><text x="82" y="27" class="headText">Producto</text><text x="16" y="66" class="attr">+ id_producto: int</text><text x="16" y="88" class="attr">+ nombre: string</text><text x="16" y="110" class="attr">+ marca: string</text><text x="16" y="132" class="attr">+ descripcion: text</text><text x="16" y="154" class="attr">+ activo: bool</text></g>
+  <g id="inventario" transform="translate(700,390)"><rect class="box" width="275" height="170" rx="8"/><rect class="head" width="275" height="42" rx="8"/><text x="42" y="27" class="headText">InventarioDistribuidor</text><text x="16" y="66" class="attr">+ id_inventario: int</text><text x="16" y="88" class="attr">+ precio: decimal</text><text x="16" y="110" class="attr">+ stock_disponible: int</text><text x="16" y="132" class="attr">+ unidad_medida: string</text><text x="16" y="154" class="attr">+ tiempo_entrega_dias: int</text></g>
+  <g id="carrito" transform="translate(380,405)"><rect class="box" width="255" height="126" rx="8"/><rect class="head" width="255" height="42" rx="8"/><text x="92" y="27" class="headText">Carrito</text><text x="16" y="66" class="attr">+ id_carrito: int</text><text x="16" y="88" class="attr">+ fecha_creacion: datetime</text><text x="16" y="110" class="attr">+ fecha_actualizacion: datetime</text></g>
+  <g id="item" transform="translate(380,610)"><rect class="box" width="255" height="104" rx="8"/><rect class="head" width="255" height="42" rx="8"/><text x="80" y="27" class="headText">ItemCarrito</text><text x="16" y="66" class="attr">+ id_item: int</text><text x="16" y="88" class="attr">+ cantidad: int</text></g>
+
+  <g id="pedido" transform="translate(60,405)"><rect class="box" width="245" height="170" rx="8"/><rect class="head" width="245" height="42" rx="8"/><text x="91" y="27" class="headText">Pedido</text><text x="16" y="66" class="attr">+ id_pedido: int</text><text x="16" y="88" class="attr">+ fecha_pedido: datetime</text><text x="16" y="110" class="attr">+ estado: string</text><text x="16" y="132" class="attr">+ tipo_entrega: string</text><text x="16" y="154" class="attr">+ total_pedido: decimal</text></g>
+  <g id="detalle" transform="translate(60,650)"><rect class="box" width="245" height="148" rx="8"/><rect class="head" width="245" height="42" rx="8"/><text x="60" y="27" class="headText">DetallePedido</text><text x="16" y="66" class="attr">+ id_detalle: int</text><text x="16" y="88" class="attr">+ cantidad: int</text><text x="16" y="110" class="attr">+ precio_unitario: decimal</text><text x="16" y="132" class="attr">+ subtotal: decimal</text></g>
+  <g id="pago" transform="translate(60,855)"><rect class="box" width="245" height="126" rx="8"/><rect class="head" width="245" height="42" rx="8"/><text x="100" y="27" class="headText">Pago</text><text x="16" y="66" class="attr">+ id_pago: int</text><text x="16" y="88" class="attr">+ metodo_pago: string</text><text x="16" y="110" class="attr">+ estado_pago: string</text></g>
+  <g id="tracking" transform="translate(380,790)"><rect class="box" width="255" height="126" rx="8"/><rect class="head" width="255" height="42" rx="8"/><text x="63" y="27" class="headText">PedidoTracking</text><text x="16" y="66" class="attr">+ id_tracking: int</text><text x="16" y="88" class="attr">+ estado: string</text><text x="16" y="110" class="attr">+ timestamp: datetime</text></g>
+  <g id="resena" transform="translate(700,650)"><rect class="box" width="275" height="126" rx="8"/><rect class="head" width="275" height="42" rx="8"/><text x="108" y="27" class="headText">Resena</text><text x="16" y="66" class="attr">+ id_resena: int</text><text x="16" y="88" class="attr">+ calificacion: int</text><text x="16" y="110" class="attr">+ comentario: text</text></g>
+  <g id="reporte" transform="translate(1090,650)"><rect class="box" width="245" height="148" rx="8"/><rect class="head" width="245" height="42" rx="8"/><text x="58" y="27" class="headText">ReporteCalidad</text><text x="16" y="66" class="attr">+ id_reporte: int</text><text x="16" y="88" class="attr">+ descripcion_problema: text</text><text x="16" y="110" class="attr">+ estado_reporte: string</text><text x="16" y="132" class="attr">+ resolucion: text</text></g>
+
+  <path class="rel" d="M305 210 L380 210"/><text x="325" y="198" class="note">1 a 0..1</text>
+  <path class="rel" d="M305 245 C470 335 605 220 700 220"/><text x="500" y="250" class="note">1 a 0..1</text>
+  <path class="rel" d="M1212 271 L1212 350"/><text x="1225" y="315" class="note">1 a *</text>
+  <path class="rel" d="M1090 435 L975 455"/><text x="1010" y="430" class="note">1 a *</text>
+  <path class="rel" d="M837 315 L837 390"/><text x="850" y="360" class="note">1 a *</text>
+  <path class="rel" d="M505 315 L505 405"/><text x="520" y="365" class="note">1 a 1</text>
+  <path class="rel" d="M505 531 L505 610"/><text x="520" y="575" class="note">1 a *</text>
+  <path class="rel" d="M635 662 L700 545"/><text x="642" y="620" class="note">* a 1</text>
+  <path class="rel" d="M380 230 C250 280 183 325 183 405"/><text x="230" y="335" class="note">1 a *</text>
+  <path class="rel" d="M700 270 C560 330 305 340 215 405"/><text x="450" y="345" class="note">1 a *</text>
+  <path class="rel" d="M183 575 L183 650"/><text x="198" y="620" class="note">1 a *</text>
+  <path class="rel" d="M305 720 C450 660 585 600 700 530"/><text x="470" y="655" class="note">* a 1</text>
+  <path class="rel" d="M183 575 L183 855"/><text x="198" y="830" class="note">1 a 0..1</text>
+  <path class="rel" d="M305 515 C360 600 420 700 505 790"/><text x="365" y="690" class="note">1 a *</text>
+  <path class="rel" d="M635 710 L700 710"/><text x="648" y="696" class="note">* reseña</text>
+  <path class="rel" d="M975 710 L1090 715"/><text x="1000" y="700" class="note">reporta</text>
+</svg>

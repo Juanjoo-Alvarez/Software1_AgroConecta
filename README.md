@@ -60,6 +60,18 @@ Incluye:
 
 ---
 
+### 📁 Diagramas
+Contiene los diagramas del proyecto en formato SVG. Estos diagramas son representaciones visuales que ayudan a entender el problema, las necesidades de los usuarios, la estructura del sistema y la organización de los datos de AgroConecta.
+
+Incluye:
+- `mapa-historias-usuario.svg`: organiza el recorrido funcional del usuario, desde el acceso a la aplicación hasta la compra, rastreo del pedido y reseñas.
+- `lean-ux-canvas.svg`: resume el problema de negocio, usuarios, beneficios, hipótesis, MVP y métricas de aprendizaje del proyecto.
+- `diagrama-clases.svg`: presenta el modelo conceptual de clases del sistema, incluyendo usuarios, catálogo, inventario, pedidos, pagos, rastreo y reseñas.
+- `diagrama-base-datos.svg`: muestra el modelo relacional de la base de datos, con tablas, llaves primarias, llaves foráneas y relaciones principales.
+- `diagramas-agroconecta-completo.svg`: agrupa los diagramas principales en una vista consolidada para facilitar su revisión completa.
+
+---
+
 ### 📁 Scrum
 Carpeta reservada para el futuro
 

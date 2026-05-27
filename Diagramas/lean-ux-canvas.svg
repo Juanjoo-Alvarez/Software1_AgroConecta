@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <defs>
+    <style>
+      .bg{fill:#f7faf7}.title{font:700 38px Arial,sans-serif;fill:#173b2f}.sub{font:400 19px Arial,sans-serif;fill:#52685d}.cell{fill:#fff;stroke:#c9d9d0;stroke-width:2}.head{font:700 20px Arial,sans-serif;fill:#1f4d3a}.txt{font:400 17px Arial,sans-serif;fill:#24382f}.small{font:400 15px Arial,sans-serif;fill:#51665c}.accent1{fill:#e7f4ea}.accent2{fill:#fff5d9}.accent3{fill:#eaf0ff}.accent4{fill:#fce8e6}.num{font:700 15px Arial,sans-serif;fill:#fff}.badge{fill:#2f6f4e}.note{font:700 16px Arial,sans-serif;fill:#234537}
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="1100"/>
+  <text x="60" y="72" class="title">Lean UX Canvas - AgroConecta</text>
+  <text x="60" y="106" class="sub">Sintesis de problema, usuarios, hipotesis, MVP y aprendizaje esperado para la app de insumos agricolas.</text>
+
+  <g transform="translate(60,150)">
+    <rect class="cell" x="0" y="0" width="470" height="270" rx="10"/>
+    <rect class="accent1" x="0" y="0" width="470" height="58" rx="10"/>
+    <circle class="badge" cx="32" cy="29" r="17"/><text x="28" y="35" class="num">1</text>
+    <text x="62" y="37" class="head">Problema de negocio</text>
+    <text x="28" y="92" class="txt">Los agricultores pierden tiempo al comprar</text>
+    <text x="28" y="118" class="txt">insumos por canales tradicionales.</text>
+    <text x="28" y="154" class="txt">Existe desconfianza por precios variables,</text>
+    <text x="28" y="180" class="txt">productos falsificados y poca asesoria.</text>
+    <text x="28" y="216" class="small">Impacto: compras lentas, menor planificacion</text>
+    <text x="28" y="240" class="small">y riesgo de perdida en los cultivos.</text>
+  </g>
+
+  <g transform="translate(565,150)">
+    <rect class="cell" x="0" y="0" width="470" height="270" rx="10"/>
+    <rect class="accent2" x="0" y="0" width="470" height="58" rx="10"/>
+    <circle class="badge" cx="32" cy="29" r="17"/><text x="28" y="35" class="num">2</text>
+    <text x="62" y="37" class="head">Usuarios y clientes</text>
+    <text x="28" y="92" class="txt">Agricultores guatemaltecos de pequena</text>
+    <text x="28" y="118" class="txt">y mediana escala.</text>
+    <text x="28" y="154" class="txt">Distribuidores de insumos agricolas que</text>
+    <text x="28" y="180" class="txt">necesitan vender y generar confianza.</text>
+    <text x="28" y="216" class="small">Usuarios extremos: agricultores con baja</text>
+    <text x="28" y="240" class="small">conectividad y agricultores tecnologicos.</text>
+  </g>
+
+  <g transform="translate(1070,150)">
+    <rect class="cell" x="0" y="0" width="470" height="270" rx="10"/>
+    <rect class="accent3" x="0" y="0" width="470" height="58" rx="10"/>
+    <circle class="badge" cx="32" cy="29" r="17"/><text x="28" y="35" class="num">3</text>
+    <text x="62" y="37" class="head">Resultados esperados</text>
+    <text x="28" y="92" class="txt">Reducir el tiempo para encontrar y comprar</text>
+    <text x="28" y="118" class="txt">insumos agricolas.</text>
+    <text x="28" y="154" class="txt">Aumentar confianza mediante distribuidores</text>
+    <text x="28" y="180" class="txt">verificados, calificaciones y resenas.</text>
+    <text x="28" y="216" class="small">Completar pedidos con pago claro y rastreo</text>
+    <text x="28" y="240" class="small">del estado de entrega.</text>
+  </g>
+
+  <g transform="translate(60,455)">
+    <rect class="cell" x="0" y="0" width="470" height="270" rx="10"/>
+    <rect class="accent4" x="0" y="0" width="470" height="58" rx="10"/>
+    <circle class="badge" cx="32" cy="29" r="17"/><text x="28" y="35" class="num">4</text>
+    <text x="62" y="37" class="head">Beneficios para el usuario</text>
+    <text x="28" y="92" class="txt">Comparar precios antes de viajar o comprar.</text>
+    <text x="28" y="128" class="txt">Ver informacion tecnica del producto.</text>
+    <text x="28" y="164" class="txt">Comprar desde el celular con menos friccion.</text>
+    <text x="28" y="200" class="txt">Rastrear el pedido y evaluar la experiencia.</text>
+  </g>
+
+  <g transform="translate(565,455)">
+    <rect class="cell" x="0" y="0" width="470" height="270" rx="10"/>
+    <rect class="accent1" x="0" y="0" width="470" height="58" rx="10"/>
+    <circle class="badge" cx="32" cy="29" r="17"/><text x="28" y="35" class="num">5</text>
+    <text x="62" y="37" class="head">Soluciones principales</text>
+    <text x="28" y="92" class="txt">Catalogo digital con categorias y filtros.</text>
+    <text x="28" y="128" class="txt">Comparador por distribuidor, precio y stock.</text>
+    <text x="28" y="164" class="txt">Carrito, checkout y metodos de pago.</text>
+    <text x="28" y="200" class="txt">Rastreo de pedido, resenas y reportes.</text>
+  </g>
+
+  <g transform="translate(1070,455)">
+    <rect class="cell" x="0" y="0" width="470" height="270" rx="10"/>
+    <rect class="accent2" x="0" y="0" width="470" height="58" rx="10"/>
+    <circle class="badge" cx="32" cy="29" r="17"/><text x="28" y="35" class="num">6</text>
+    <text x="62" y="37" class="head">Hipotesis</text>
+    <text x="28" y="92" class="txt">Si los agricultores pueden comparar productos,</text>
+    <text x="28" y="118" class="txt">precios y distribuidores desde una app,</text>
+    <text x="28" y="154" class="txt">entonces tomaran decisiones de compra</text>
+    <text x="28" y="180" class="txt">con mayor confianza y menor tiempo.</text>
+    <text x="28" y="216" class="small">La confianza aumenta si hay calificaciones,</text>
+    <text x="28" y="240" class="small">verificacion y seguimiento del pedido.</text>
+  </g>
+
+  <g transform="translate(60,760)">
+    <rect class="cell" x="0" y="0" width="470" height="270" rx="10"/>
+    <rect class="accent3" x="0" y="0" width="470" height="58" rx="10"/>
+    <circle class="badge" cx="32" cy="29" r="17"/><text x="28" y="35" class="num">7</text>
+    <text x="62" y="37" class="head">Supuestos mas riesgosos</text>
+    <text x="28" y="92" class="txt">Los agricultores aceptaran usar una app movil.</text>
+    <text x="28" y="128" class="txt">Los distribuidores mantendran precios y stock.</text>
+    <text x="28" y="164" class="txt">Los pagos digitales seran percibidos seguros.</text>
+    <text x="28" y="200" class="txt">La conectividad sera suficiente para operar.</text>
+  </g>
+
+  <g transform="translate(565,760)">
+    <rect class="cell" x="0" y="0" width="470" height="270" rx="10"/>
+    <rect class="accent4" x="0" y="0" width="470" height="58" rx="10"/>
+    <circle class="badge" cx="32" cy="29" r="17"/><text x="28" y="35" class="num">8</text>
+    <text x="62" y="37" class="head">MVP o experimento</text>
+    <text x="28" y="92" class="txt">Registro e inicio de sesion por tipo de usuario.</text>
+    <text x="28" y="128" class="txt">Catalogo, filtros, detalle y carrito.</text>
+    <text x="28" y="164" class="txt">Checkout con pago contra entrega o movil.</text>
+    <text x="28" y="200" class="txt">Confirmacion, rastreo y resenas.</text>
+  </g>
+
+  <g transform="translate(1070,760)">
+    <rect class="cell" x="0" y="0" width="470" height="270" rx="10"/>
+    <rect class="accent1" x="0" y="0" width="470" height="58" rx="10"/>
+    <circle class="badge" cx="32" cy="29" r="17"/><text x="28" y="35" class="num">9</text>
+    <text x="62" y="37" class="head">Metricas de aprendizaje</text>
+    <text x="28" y="92" class="txt">Tiempo promedio para completar compra.</text>
+    <text x="28" y="128" class="txt">Pedidos creados y pedidos completados.</text>
+    <text x="28" y="164" class="txt">Tasa de abandono del carrito.</text>
+    <text x="28" y="200" class="txt">Cantidad de resenas y rating promedio.</text>
+    <text x="28" y="236" class="txt">Uso de filtros, pagos y rastreo.</text>
+  </g>
+</svg>

@@ -1,0 +1,264 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1320" viewBox="0 0 1900 1320">
+  <defs>
+    <style>
+      .bg{fill:#f7faf7}.title{font:700 38px Arial,sans-serif;fill:#173b2f}.sub{font:400 18px Arial,sans-serif;fill:#52685d}.section{fill:#ffffff;stroke:#d5e2da;stroke-width:2}.sectionTitle{font:700 18px Arial,sans-serif;fill:#2c4a3d}.table{fill:#ffffff;stroke:#5d7468;stroke-width:2}.theadUser{fill:#2f6f4e}.theadCatalog{fill:#386fa4}.theadOrder{fill:#7a4e91}.theadAfter{fill:#a44a3f}.tname{font:700 17px Arial,sans-serif;fill:#ffffff}.pk{font:700 14px Arial,sans-serif;fill:#173b2f}.fk{font:700 14px Arial,sans-serif;fill:#8a4f22}.field{font:400 14px Arial,sans-serif;fill:#263a32}.rel{stroke:#46675a;stroke-width:2.4;fill:none;marker-end:url(#arrow)}.relSoft{stroke:#9a6b62;stroke-width:2.1;stroke-dasharray:8 7;fill:none;marker-end:url(#arrowSoft)}.relLabel{font:700 13px Arial,sans-serif;fill:#2e4c40}.softLabel{font:700 13px Arial,sans-serif;fill:#8a4f45}.legend{font:400 15px Arial,sans-serif;fill:#465f54}.legendStrong{font:700 15px Arial,sans-serif;fill:#2e4c40}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#46675a"/></marker>
+    <marker id="arrowSoft" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#9a6b62"/></marker>
+  </defs>
+
+  <rect class="bg" width="1900" height="1320"/>
+  <text x="60" y="66" class="title">Diagrama de base de datos - AgroConecta</text>
+  <text x="60" y="100" class="sub">Modelo relacional organizado por modulos. Las tablas muestran PK/FK y las lineas principales indican cardinalidad.</text>
+
+  <rect x="60" y="122" width="1780" height="48" rx="10" fill="#ffffff" stroke="#d5e2da"/>
+  <line x1="88" y1="146" x2="160" y2="146" class="rel"/>
+  <text x="175" y="151" class="legend"><tspan class="legendStrong">Linea solida:</tspan> relacion principal del flujo de compra</text>
+  <line x1="545" y1="146" x2="620" y2="146" class="relSoft"/>
+  <text x="635" y="151" class="legend"><tspan class="legendStrong">Linea punteada:</tspan> referencia de postventa o calidad</text>
+  <text x="1110" y="151" class="legend">PK = llave primaria, FK = llave foranea, UK = valor unico</text>
+
+  <rect class="section" x="40" y="190" width="700" height="720" rx="16"/>
+  <text x="65" y="222" class="sectionTitle">Usuarios y perfiles</text>
+  <rect class="section" x="790" y="190" width="760" height="720" rx="16"/>
+  <text x="815" y="222" class="sectionTitle">Catalogo e inventario</text>
+  <rect class="section" x="40" y="950" width="1490" height="315" rx="16"/>
+  <text x="65" y="982" class="sectionTitle">Pedidos, pagos y seguimiento</text>
+  <rect class="section" x="1535" y="390" width="330" height="550" rx="16"/>
+  <text x="1560" y="422" class="sectionTitle">Postventa</text>
+
+  <!-- Relaciones principales, dibujadas primero para que no tapen las tablas -->
+  <path class="rel" d="M210 370 L210 440"/>
+  <text x="224" y="410" class="relLabel">1 : 0..1</text>
+
+  <path class="rel" d="M350 265 L560 265 L560 440"/>
+  <text x="415" y="252" class="relLabel">1 : 0..1</text>
+
+  <path class="rel" d="M210 650 L210 720"/>
+  <text x="224" y="695" class="relLabel">1 : N</text>
+
+  <path class="rel" d="M350 545 L385 545 L385 795 L420 795"/>
+  <text x="388" y="670" class="relLabel">1 : 1</text>
+
+  <path class="rel" d="M700 795 L760 795"/>
+  <text x="713" y="783" class="relLabel">1 : N</text>
+
+  <path class="rel" d="M700 545 L1180 545"/>
+  <text x="885" y="532" class="relLabel">1 : N</text>
+
+  <path class="rel" d="M950 300 L950 440"/>
+  <text x="964" y="375" class="relLabel">1 : N</text>
+
+  <path class="rel" d="M1100 555 L1180 555"/>
+  <text x="1122" y="543" class="relLabel">1 : N</text>
+
+  <path class="rel" d="M70 545 L35 545 L35 1085 L70 1085"/>
+  <text x="48" y="822" class="relLabel">1 : N</text>
+
+  <path class="rel" d="M560 650 L730 650 L730 960 L225 960 L225 1010"/>
+  <text x="584" y="940" class="relLabel">1 : N</text>
+
+  <path class="rel" d="M380 1090 L430 1090"/>
+  <text x="393" y="1078" class="relLabel">1 : N</text>
+
+  <path class="rel" d="M1340 660 L1340 930 L585 930 L585 1010"/>
+  <text x="1030" y="918" class="relLabel">1 : N</text>
+
+  <path class="rel" d="M1040 795 L1340 795 L1340 660"/>
+  <text x="1160" y="782" class="relLabel">N : 1</text>
+
+  <path class="rel" d="M225 1250 L225 1285 L935 1285 L935 1180"/>
+  <text x="565" y="1275" class="relLabel">1 : 0..1</text>
+
+  <path class="rel" d="M225 1010 L225 975 L1280 975 L1280 1010"/>
+  <text x="955" y="965" class="relLabel">1 : N</text>
+
+  <!-- Referencias de postventa. Se separan para que el flujo principal siga claro. -->
+  <path class="relSoft" d="M960 440 L960 390 L1690 390 L1690 440"/>
+  <text x="1210" y="380" class="softLabel">producto consultado en resenas/reportes</text>
+
+  <path class="relSoft" d="M380 1145 L1515 1145 L1515 525 L1550 525"/>
+  <text x="1190" y="1132" class="softLabel">pedido puede originar resena</text>
+
+  <path class="relSoft" d="M380 1175 L1515 1175 L1515 815 L1550 815"/>
+  <text x="1185" y="1163" class="softLabel">pedido puede originar reporte</text>
+
+  <path class="relSoft" d="M350 505 L380 505 L380 395 L1520 395 L1520 480 L1550 480"/>
+  <text x="670" y="385" class="softLabel">agricultor escribe resenas y reportes</text>
+
+  <!-- Tablas: usuarios -->
+  <g transform="translate(70,160)">
+    <rect class="table" width="280" height="210" rx="10"/>
+    <rect class="theadUser" width="280" height="42" rx="10"/>
+    <text x="103" y="27" class="tname">usuario</text>
+    <text x="16" y="66" class="pk">PK id_usuario</text>
+    <text x="16" y="89" class="field">nombre, apellido</text>
+    <text x="16" y="112" class="field">telefono UK</text>
+    <text x="16" y="135" class="field">email UK</text>
+    <text x="16" y="158" class="field">contrasena_hash</text>
+    <text x="16" y="181" class="field">tipo_usuario, activo</text>
+  </g>
+
+  <g transform="translate(70,440)">
+    <rect class="table" width="280" height="210" rx="10"/>
+    <rect class="theadUser" width="280" height="42" rx="10"/>
+    <text x="90" y="27" class="tname">agricultor</text>
+    <text x="16" y="66" class="pk">PK id_agricultor</text>
+    <text x="16" y="89" class="fk">FK id_usuario</text>
+    <text x="16" y="112" class="field">departamento, municipio</text>
+    <text x="16" y="135" class="field">tipo_agricultor</text>
+    <text x="16" y="158" class="field">tamano_terreno_ha</text>
+    <text x="16" y="181" class="field">cultivos_principales</text>
+  </g>
+
+  <g transform="translate(420,440)">
+    <rect class="table" width="280" height="210" rx="10"/>
+    <rect class="theadUser" width="280" height="42" rx="10"/>
+    <text x="88" y="27" class="tname">distribuidor</text>
+    <text x="16" y="66" class="pk">PK id_distribuidor</text>
+    <text x="16" y="89" class="fk">FK id_usuario</text>
+    <text x="16" y="112" class="field">nombre_negocio</text>
+    <text x="16" y="135" class="field">nit UK, departamento</text>
+    <text x="16" y="158" class="field">estado_verificacion</text>
+    <text x="16" y="181" class="field">calificacion_promedio</text>
+  </g>
+
+  <g transform="translate(70,720)">
+    <rect class="table" width="280" height="170" rx="10"/>
+    <rect class="theadUser" width="280" height="42" rx="10"/>
+    <text x="67" y="27" class="tname">direccion_entrega</text>
+    <text x="16" y="66" class="pk">PK id_direccion</text>
+    <text x="16" y="89" class="fk">FK id_agricultor</text>
+    <text x="16" y="112" class="field">alias, descripcion</text>
+    <text x="16" y="135" class="field">departamento, municipio</text>
+    <text x="16" y="158" class="field">latitud, longitud</text>
+  </g>
+
+  <g transform="translate(420,720)">
+    <rect class="table" width="280" height="150" rx="10"/>
+    <rect class="theadUser" width="280" height="42" rx="10"/>
+    <text x="108" y="27" class="tname">carrito</text>
+    <text x="16" y="66" class="pk">PK id_carrito</text>
+    <text x="16" y="89" class="fk">FK id_agricultor UK</text>
+    <text x="16" y="112" class="field">fecha_creacion</text>
+    <text x="16" y="135" class="field">fecha_actualizacion</text>
+  </g>
+
+  <g transform="translate(760,720)">
+    <rect class="table" width="280" height="150" rx="10"/>
+    <rect class="theadOrder" width="280" height="42" rx="10"/>
+    <text x="88" y="27" class="tname">item_carrito</text>
+    <text x="16" y="66" class="pk">PK id_item</text>
+    <text x="16" y="89" class="fk">FK id_carrito</text>
+    <text x="16" y="112" class="fk">FK id_inventario</text>
+    <text x="16" y="135" class="field">cantidad</text>
+  </g>
+
+  <!-- Tablas: catalogo -->
+  <g transform="translate(820,160)">
+    <rect class="table" width="260" height="140" rx="10"/>
+    <rect class="theadCatalog" width="260" height="42" rx="10"/>
+    <text x="84" y="27" class="tname">categoria</text>
+    <text x="16" y="66" class="pk">PK id_categoria</text>
+    <text x="16" y="89" class="field">nombre UK</text>
+    <text x="16" y="112" class="field">descripcion</text>
+  </g>
+
+  <g transform="translate(820,440)">
+    <rect class="table" width="280" height="230" rx="10"/>
+    <rect class="theadCatalog" width="280" height="42" rx="10"/>
+    <text x="103" y="27" class="tname">producto</text>
+    <text x="16" y="66" class="pk">PK id_producto</text>
+    <text x="16" y="89" class="fk">FK id_categoria</text>
+    <text x="16" y="112" class="field">nombre, marca</text>
+    <text x="16" y="135" class="field">descripcion</text>
+    <text x="16" y="158" class="field">composicion</text>
+    <text x="16" y="181" class="field">dosis_recomendada</text>
+    <text x="16" y="204" class="field">activo</text>
+  </g>
+
+  <g transform="translate(1180,440)">
+    <rect class="table" width="320" height="220" rx="10"/>
+    <rect class="theadCatalog" width="320" height="42" rx="10"/>
+    <text x="58" y="27" class="tname">inventario_distribuidor</text>
+    <text x="16" y="66" class="pk">PK id_inventario</text>
+    <text x="16" y="89" class="fk">FK id_distribuidor</text>
+    <text x="16" y="112" class="fk">FK id_producto</text>
+    <text x="16" y="135" class="field">precio</text>
+    <text x="16" y="158" class="field">stock_disponible</text>
+    <text x="16" y="181" class="field">unidad_medida</text>
+    <text x="16" y="204" class="field">UNIQUE distribuidor + producto</text>
+  </g>
+
+  <!-- Tablas: pedidos -->
+  <g transform="translate(70,1010)">
+    <rect class="table" width="310" height="240" rx="10"/>
+    <rect class="theadOrder" width="310" height="42" rx="10"/>
+    <text x="127" y="27" class="tname">pedido</text>
+    <text x="16" y="66" class="pk">PK id_pedido</text>
+    <text x="16" y="89" class="fk">FK id_agricultor</text>
+    <text x="16" y="112" class="fk">FK id_distribuidor</text>
+    <text x="16" y="135" class="field">fecha_pedido, fecha_entrega_real</text>
+    <text x="16" y="158" class="field">estado</text>
+    <text x="16" y="181" class="field">tipo_entrega, direccion_entrega</text>
+    <text x="16" y="204" class="field">total_pedido, costo_envio</text>
+    <text x="16" y="227" class="field">notas</text>
+  </g>
+
+  <g transform="translate(430,1010)">
+    <rect class="table" width="310" height="170" rx="10"/>
+    <rect class="theadOrder" width="310" height="42" rx="10"/>
+    <text x="91" y="27" class="tname">detalle_pedido</text>
+    <text x="16" y="66" class="pk">PK id_detalle</text>
+    <text x="16" y="89" class="fk">FK id_pedido</text>
+    <text x="16" y="112" class="fk">FK id_inventario</text>
+    <text x="16" y="135" class="field">cantidad</text>
+    <text x="16" y="158" class="field">precio_unitario, subtotal</text>
+  </g>
+
+  <g transform="translate(790,1010)">
+    <rect class="table" width="290" height="170" rx="10"/>
+    <rect class="theadOrder" width="290" height="42" rx="10"/>
+    <text x="124" y="27" class="tname">pago</text>
+    <text x="16" y="66" class="pk">PK id_pago</text>
+    <text x="16" y="89" class="fk">FK id_pedido UK</text>
+    <text x="16" y="112" class="field">metodo_pago</text>
+    <text x="16" y="135" class="field">monto, estado_pago</text>
+    <text x="16" y="158" class="field">referencia_transaccion</text>
+  </g>
+
+  <g transform="translate(1130,1010)">
+    <rect class="table" width="300" height="170" rx="10"/>
+    <rect class="theadOrder" width="300" height="42" rx="10"/>
+    <text x="77" y="27" class="tname">pedido_tracking</text>
+    <text x="16" y="66" class="pk">PK id_tracking</text>
+    <text x="16" y="89" class="fk">FK id_pedido</text>
+    <text x="16" y="112" class="field">estado</text>
+    <text x="16" y="135" class="field">timestamp</text>
+    <text x="16" y="158" class="field">notas</text>
+  </g>
+
+  <!-- Tablas: postventa -->
+  <g transform="translate(1550,440)">
+    <rect class="table" width="280" height="170" rx="10"/>
+    <rect class="theadAfter" width="280" height="42" rx="10"/>
+    <text x="112" y="27" class="tname">resena</text>
+    <text x="16" y="66" class="pk">PK id_resena</text>
+    <text x="16" y="89" class="fk">FK id_agricultor</text>
+    <text x="16" y="112" class="fk">FK id_producto</text>
+    <text x="16" y="135" class="fk">FK id_pedido</text>
+    <text x="16" y="158" class="field">calificacion, comentario</text>
+  </g>
+
+  <g transform="translate(1550,720)">
+    <rect class="table" width="280" height="190" rx="10"/>
+    <rect class="theadAfter" width="280" height="42" rx="10"/>
+    <text x="68" y="27" class="tname">reporte_calidad</text>
+    <text x="16" y="66" class="pk">PK id_reporte</text>
+    <text x="16" y="89" class="fk">FK id_agricultor</text>
+    <text x="16" y="112" class="fk">FK id_pedido</text>
+    <text x="16" y="135" class="fk">FK id_producto</text>
+    <text x="16" y="158" class="field">descripcion_problema</text>
+    <text x="16" y="181" class="field">estado_reporte, resolucion</text>
+  </g>
+</svg>

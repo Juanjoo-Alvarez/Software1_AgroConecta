@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
+  <defs>
+    <style>
+      .bg{fill:#f7faf7}.title{font:700 38px Arial, sans-serif;fill:#193b2d}.subtitle{font:400 19px Arial, sans-serif;fill:#4b6458}.colHead{font:700 18px Arial, sans-serif;fill:#123528}.label{font:700 15px Arial, sans-serif;fill:#2a4639}.txt{font:400 15px Arial, sans-serif;fill:#21352c}.small{font:400 13px Arial, sans-serif;fill:#51665b}.req{fill:#eaf4ef;stroke:#3b8f5a;stroke-width:2}.header{fill:#1f6f4a}.headerText{font:700 17px Arial, sans-serif;fill:#fff}.lane{fill:#ffffff;stroke:#d7e3dc;stroke-width:1.5}.legend{font:700 14px Arial, sans-serif;fill:#234537}
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="1050"/>
+  <text x="60" y="70" class="title">Mapa de historias de usuario - AgroConecta</text>
+  <text x="60" y="103" class="subtitle">Objetivo: comprar insumos agrícolas confiables, comparar opciones y dar seguimiento al pedido sin perder tiempo en traslados.</text>
+
+
+  <g transform="translate(60,160)">
+    <rect class="lane" x="0" y="0" width="175" height="740" rx="10"/><rect class="header" x="0" y="0" width="175" height="54" rx="10"/><text x="18" y="33" class="headerText">1. Acceso</text>
+    <rect class="req" x="15" y="78" width="145" height="98" rx="9"/><text x="28" y="105" class="txt">Registrarme</text><text x="28" y="127" class="txt">como agricultor</text><text x="28" y="149" class="small">para usar la app</text>
+    <rect class="req" x="15" y="196" width="145" height="98" rx="9"/><text x="28" y="223" class="txt">Iniciar sesión</text><text x="28" y="245" class="txt">con mi cuenta</text><text x="28" y="267" class="small">para comprar</text>
+    <rect class="req" x="15" y="314" width="145" height="98" rx="9"/><text x="28" y="341" class="txt">Editar perfil</text><text x="28" y="363" class="txt">y ubicación</text><text x="28" y="385" class="small">para mejores datos</text>
+  </g>
+
+  <g transform="translate(250,160)">
+    <rect class="lane" x="0" y="0" width="175" height="740" rx="10"/><rect class="header" x="0" y="0" width="175" height="54" rx="10"/><text x="18" y="33" class="headerText">2. Catálogo</text>
+    <rect class="req" x="15" y="78" width="145" height="98" rx="9"/><text x="28" y="105" class="txt">Ver productos</text><text x="28" y="127" class="txt">disponibles</text><text x="28" y="149" class="small">por categoría</text>
+    <rect class="req" x="15" y="196" width="145" height="98" rx="9"/><text x="28" y="223" class="txt">Filtrar por tipo</text><text x="28" y="245" class="txt">de insumo</text><text x="28" y="267" class="small">para ahorrar tiempo</text>
+    <rect class="req" x="15" y="314" width="145" height="98" rx="9"/><text x="28" y="341" class="txt">Buscar por</text><text x="28" y="363" class="txt">nombre o marca</text><text x="28" y="385" class="small">para ir directo</text>
+  </g>
+
+  <g transform="translate(440,160)">
+    <rect class="lane" x="0" y="0" width="175" height="740" rx="10"/><rect class="header" x="0" y="0" width="175" height="54" rx="10"/><text x="18" y="33" class="headerText">3. Comparar</text>
+    <rect class="req" x="15" y="78" width="145" height="98" rx="9"/><text x="28" y="105" class="txt">Ver detalle</text><text x="28" y="127" class="txt">del producto</text><text x="28" y="149" class="small">uso y dosis</text>
+    <rect class="req" x="15" y="196" width="145" height="98" rx="9"/><text x="28" y="223" class="txt">Comparar</text><text x="28" y="245" class="txt">precios</text><text x="28" y="267" class="small">entre distribuidores</text>
+    <rect class="req" x="15" y="314" width="145" height="98" rx="9"/><text x="28" y="341" class="txt">Ver reseñas</text><text x="28" y="363" class="txt">y estrellas</text><text x="28" y="385" class="small">para confiar</text>
+  </g>
+
+  <g transform="translate(630,160)">
+    <rect class="lane" x="0" y="0" width="175" height="740" rx="10"/><rect class="header" x="0" y="0" width="175" height="54" rx="10"/><text x="18" y="33" class="headerText">4. Carrito</text>
+    <rect class="req" x="15" y="78" width="145" height="98" rx="9"/><text x="28" y="105" class="txt">Agregar al</text><text x="28" y="127" class="txt">carrito</text><text x="28" y="149" class="small">con cantidad</text>
+    <rect class="req" x="15" y="196" width="145" height="98" rx="9"/><text x="28" y="223" class="txt">Actualizar</text><text x="28" y="245" class="txt">cantidades</text><text x="28" y="267" class="small">según necesidad</text>
+    <rect class="req" x="15" y="314" width="145" height="98" rx="9"/><text x="28" y="341" class="txt">Guardar</text><text x="28" y="363" class="txt">carrito</text><text x="28" y="385" class="small">para después</text>
+  </g>
+
+  <g transform="translate(820,160)">
+    <rect class="lane" x="0" y="0" width="175" height="740" rx="10"/><rect class="header" x="0" y="0" width="175" height="54" rx="10"/><text x="18" y="33" class="headerText">5. Pago</text>
+    <rect class="req" x="15" y="78" width="145" height="98" rx="9"/><text x="28" y="105" class="txt">Elegir pago</text><text x="28" y="127" class="txt">contra entrega</text><text x="28" y="149" class="small">sin banco digital</text>
+    <rect class="req" x="15" y="196" width="145" height="98" rx="9"/><text x="28" y="223" class="txt">Usar Tigo</text><text x="28" y="245" class="txt">Money o</text><text x="28" y="267" class="txt">Banrural Móvil</text>
+    <rect class="req" x="15" y="314" width="145" height="98" rx="9"/><text x="28" y="341" class="txt">Pagar con</text><text x="28" y="363" class="txt">tarjeta</text><text x="28" y="385" class="small">si aplica</text>
+  </g>
+
+  <g transform="translate(1010,160)">
+    <rect class="lane" x="0" y="0" width="175" height="740" rx="10"/><rect class="header" x="0" y="0" width="175" height="54" rx="10"/><text x="18" y="33" class="headerText">6. Pedido</text>
+    <rect class="req" x="15" y="78" width="145" height="98" rx="9"/><text x="28" y="105" class="txt">Confirmar</text><text x="28" y="127" class="txt">pedido</text><text x="28" y="149" class="small">con resumen</text>
+    <rect class="req" x="15" y="196" width="145" height="98" rx="9"/><text x="28" y="223" class="txt">Ver historial</text><text x="28" y="245" class="txt">de compras</text><text x="28" y="267" class="small">por fecha</text>
+    <rect class="req" x="15" y="314" width="145" height="98" rx="9"/><text x="28" y="341" class="txt">Cancelar</text><text x="28" y="363" class="txt">pedido</text><text x="28" y="385" class="small">si aún procede</text>
+  </g>
+
+  <g transform="translate(1200,160)">
+    <rect class="lane" x="0" y="0" width="175" height="740" rx="10"/><rect class="header" x="0" y="0" width="175" height="54" rx="10"/><text x="18" y="33" class="headerText">7. Rastreo</text>
+    <rect class="req" x="15" y="78" width="145" height="98" rx="9"/><text x="28" y="105" class="txt">Ver estado</text><text x="28" y="127" class="txt">del pedido</text><text x="28" y="149" class="small">confirmado a entregado</text>
+    <rect class="req" x="15" y="196" width="145" height="98" rx="9"/><text x="28" y="223" class="txt">Consultar</text><text x="28" y="245" class="txt">línea de</text><text x="28" y="267" class="txt">tiempo</text>
+    <rect class="req" x="15" y="314" width="145" height="98" rx="9"/><text x="28" y="341" class="txt">Recibir</text><text x="28" y="363" class="txt">notificaciones</text><text x="28" y="385" class="small">push</text>
+  </g>
+
+  <g transform="translate(1390,160)">
+    <rect class="lane" x="0" y="0" width="150" height="740" rx="10"/><rect class="header" x="0" y="0" width="150" height="54" rx="10"/><text x="18" y="33" class="headerText">8. Reseñas</text>
+    <rect class="req" x="13" y="78" width="124" height="98" rx="9"/><text x="25" y="105" class="txt">Calificar</text><text x="25" y="127" class="txt">producto</text><text x="25" y="149" class="small">1 a 5</text>
+    <rect class="req" x="13" y="196" width="124" height="98" rx="9"/><text x="25" y="223" class="txt">Opinar del</text><text x="25" y="245" class="txt">distribuidor</text><text x="25" y="267" class="small">confianza</text>
+    <rect class="req" x="13" y="314" width="124" height="98" rx="9"/><text x="25" y="341" class="txt">Reportar</text><text x="25" y="363" class="txt">calidad</text><text x="25" y="385" class="small">si hay falla</text>
+  </g>
+</svg>
+
